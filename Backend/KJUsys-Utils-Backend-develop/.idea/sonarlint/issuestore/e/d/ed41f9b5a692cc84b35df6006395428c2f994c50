@@ -1,0 +1,5 @@
+
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æ‚³«ûÿÿÿÿJ$a8ca25d2-7ca9-4851-b8b2-41c489275a8a
+‰	java:S1008"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç£’¡J$4c6a42d9-7d29-4bec-9c15-bf961876cffd
+h
+java:S11448",Remove this unused private "$values" method.(Ç£’¡J$0a50344d-a7f3-4d87-a444-847f1f55dd98

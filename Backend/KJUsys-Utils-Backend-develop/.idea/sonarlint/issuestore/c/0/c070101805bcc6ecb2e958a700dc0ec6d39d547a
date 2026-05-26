@@ -1,0 +1,9 @@
+
+o
+java:S1192"MDefine a constant instead of duplicating this literal "content-type" 3 times.(¶§Ìüÿÿÿÿ8‡ÊÕĞ2
+s
+java:S1192"QDefine a constant instead of duplicating this literal "application/json" 3 times.(¶§Ìüÿÿÿÿ8ˆÊÕĞ2
+z
+java:S1128"XRemove this unused import 'in.edu.kristujayanti.propertyBinder.HR.WorkShiftKeysPBinder'.(êÀ¸ãøÿÿÿÿ8ÌßÓéã2
+v
+java:S1128"YRemove this unused import 'software.amazon.awssdk.services.ses.endpoints.internal.Value'.(êöşş8ÌßÓéã2

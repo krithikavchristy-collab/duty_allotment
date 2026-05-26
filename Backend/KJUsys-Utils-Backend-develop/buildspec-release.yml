@@ -1,0 +1,177 @@
+version: 0.2
+
+env:
+  variables:
+    AWS_REGION: "ap-south-1"
+    CODEARTIFACT_DOMAIN: "kjusys"
+    CODEARTIFACT_REPO: "kjusys"
+    CODEARTIFACT_SERVER_ID: "codeartifact"
+    GIT_TAG_PREFIX: "v"
+  secrets-manager:
+    GITHUB_TOKEN: "kjusys/utils/github:token"
+
+phases:
+  install:
+    commands:
+      - set -euo pipefail
+      - echo "Installing tooling"
+      - yum -y install git jq || true
+
+  pre_build:
+    commands:
+      - set -euo pipefail
+      - echo "Preparing git"
+      - git --version
+      - git config --global user.email "ci@kjusys"
+      - git config --global user.name "kjusys-ci"
+
+      # Make sure we're on main with full history
+      - git checkout main
+      - |
+        echo "Latest commit message:"
+        git log -1 --pretty=fuller
+        if git log -1 --pretty=%B | tr -d '\r' | grep -Eqi '\[(skip ci|ci skip)\]'; then
+          echo "Skip CI commit detected. Marking build to be skipped."
+          touch /tmp/SKIP_BUILD
+        fi
+
+      - |
+        if [[ -f /tmp/SKIP_BUILD ]]; then
+          echo "Skip build flagged; skipping remaining pre_build steps."
+        else
+          # Inject token for push (origin must be https://github.com/<owner>/<repo>.git)
+          ORIGIN_URL="$(git config --get remote.origin.url)"
+          echo "Origin: ${ORIGIN_URL}"
+          if [[ "${ORIGIN_URL}" =~ ^https://github.com/ ]]; then
+            PUSH_URL="${ORIGIN_URL/https:\/\//https:\/\/x-access-token:${GITHUB_TOKEN}@}"
+            git remote set-url origin "${PUSH_URL}"
+          else
+            echo "ERROR: origin is not https://github.com/... ; please adjust buildspec to set push URL."
+            exit 1
+          fi
+
+          git fetch --tags --force
+
+          echo "Preparing Maven settings for CodeArtifact (prod)"
+          mkdir -p "${HOME}/.m2"
+
+          echo "Fetching CodeArtifact auth token"
+          CODEARTIFACT_AUTH_TOKEN="$(aws codeartifact get-authorization-token --domain "${CODEARTIFACT_DOMAIN}" --region "${AWS_REGION}" --query authorizationToken --output text)"
+          test -n "${CODEARTIFACT_AUTH_TOKEN}"
+
+          echo "Fetching CodeArtifact Maven endpoint"
+          CODEARTIFACT_MAVEN_ENDPOINT="$(aws codeartifact get-repository-endpoint --domain "${CODEARTIFACT_DOMAIN}" --repository "${CODEARTIFACT_REPO}" --format maven --region "${AWS_REGION}" --query repositoryEndpoint --output text)"
+          test -n "${CODEARTIFACT_MAVEN_ENDPOINT}"
+
+          echo "Writing ${HOME}/.m2/settings.xml"
+          printf '%s\n' \
+            "<settings xmlns=\"http://maven.apache.org/SETTINGS/1.0.0\"" \
+            "          xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"" \
+            "          xsi:schemaLocation=\"http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd\">" \
+            "  <servers>" \
+            "    <server>" \
+            "      <id>${CODEARTIFACT_SERVER_ID}</id>" \
+            "      <username>aws</username>" \
+            "      <password>${CODEARTIFACT_AUTH_TOKEN}</password>" \
+            "    </server>" \
+            "  </servers>" \
+            "  <mirrors>" \
+            "    <mirror>" \
+            "      <id>${CODEARTIFACT_SERVER_ID}</id>" \
+            "      <name>CodeArtifact</name>" \
+            "      <url>${CODEARTIFACT_MAVEN_ENDPOINT}</url>" \
+            "      <mirrorOf>*</mirrorOf>" \
+            "    </mirror>" \
+            "  </mirrors>" \
+            "  <profiles>" \
+            "    <profile>" \
+            "      <id>codeartifact</id>" \
+            "      <repositories>" \
+            "        <repository>" \
+            "          <id>${CODEARTIFACT_SERVER_ID}</id>" \
+            "          <url>${CODEARTIFACT_MAVEN_ENDPOINT}</url>" \
+            "          <releases><enabled>true</enabled></releases>" \
+            "          <snapshots><enabled>false</enabled></snapshots>" \
+            "        </repository>" \
+            "      </repositories>" \
+            "      <pluginRepositories>" \
+            "        <pluginRepository>" \
+            "          <id>${CODEARTIFACT_SERVER_ID}</id>" \
+            "          <url>${CODEARTIFACT_MAVEN_ENDPOINT}</url>" \
+            "          <releases><enabled>true</enabled></releases>" \
+            "          <snapshots><enabled>false</enabled></snapshots>" \
+            "        </pluginRepository>" \
+            "      </pluginRepositories>" \
+            "    </profile>" \
+            "  </profiles>" \
+            "  <activeProfiles>" \
+            "    <activeProfile>codeartifact</activeProfile>" \
+            "  </activeProfiles>" \
+            "</settings>" \
+            > "${HOME}/.m2/settings.xml"
+        fi
+
+  build:
+    commands:
+      - |
+        set -euo pipefail
+
+        if [[ -f /tmp/SKIP_BUILD ]]; then
+          echo "Skipping build phase."
+          exit 0
+        fi
+
+        echo "Finding last release tag"
+        LAST_TAG="$(git tag --list "${GIT_TAG_PREFIX}*" --sort=-version:refname | head -n 1 || true)"
+        echo "LAST_TAG=${LAST_TAG}"
+
+        # First release bootstrap: default to 1.0.0 if no tags exist
+        if [[ -z "${LAST_TAG}" ]]; then
+          RELEASE_VERSION="1.0.0"
+          MAJOR=1
+          MINOR=0
+          PATCH=0
+          echo "No previous tags found. Bootstrapping first release: ${RELEASE_VERSION}"
+        else
+          echo "Determining bump (major/minor/patch)"
+          BUMP="$(bash ci/semver-bump.sh "${LAST_TAG}")"
+          BASE_VERSION="${LAST_TAG#${GIT_TAG_PREFIX}}"
+          echo "BUMP=${BUMP}"
+          echo "BASE_VERSION=${BASE_VERSION}"
+
+          echo "Computing next release version from BASE_VERSION"
+          IFS='.' read -r MAJOR MINOR PATCH <<< "${BASE_VERSION}"
+          MAJOR="${MAJOR:-0}"; MINOR="${MINOR:-0}"; PATCH="${PATCH:-0}"
+          case "${BUMP}" in
+            major) MAJOR=$((MAJOR+1)); MINOR=0; PATCH=0 ;;
+            minor) MINOR=$((MINOR+1)); PATCH=0 ;;
+            patch) PATCH=$((PATCH+1)) ;;
+            *) echo "Unknown bump: ${BUMP}"; exit 1 ;;
+          esac
+          RELEASE_VERSION="${MAJOR}.${MINOR}.${PATCH}"
+          echo "RELEASE_VERSION=${RELEASE_VERSION}"
+        fi
+
+        echo "Setting release version in pom.xml: ${RELEASE_VERSION}"
+        bash ci/set-maven-version.sh "${RELEASE_VERSION}"
+        git diff --quiet || git commit -am "chore(release): ${RELEASE_VERSION} [skip ci]"
+
+        echo "Deploying release to prod CodeArtifact"
+        mvn -B -DskipTests clean deploy -s "${HOME}/.m2/settings.xml" -DaltDeploymentRepository="${CODEARTIFACT_SERVER_ID}::default::${CODEARTIFACT_MAVEN_ENDPOINT}"
+
+        echo "Creating release tag ${GIT_TAG_PREFIX}${RELEASE_VERSION}"
+        git tag -a "${GIT_TAG_PREFIX}${RELEASE_VERSION}" -m "${GIT_TAG_PREFIX}${RELEASE_VERSION}"
+
+        echo "Setting next-minor snapshot version after release"
+        NEXT_MAJOR="${MAJOR}"
+        NEXT_MINOR=$((MINOR+1))
+        NEXT_PATCH=0
+        NEXT_SNAPSHOT_VERSION="${NEXT_MAJOR}.${NEXT_MINOR}.${NEXT_PATCH}-SNAPSHOT"
+        echo "NEXT_SNAPSHOT_VERSION=${NEXT_SNAPSHOT_VERSION}"
+
+        bash ci/set-maven-version.sh "${NEXT_SNAPSHOT_VERSION}"
+        git diff --quiet || git commit -am "chore: start ${NEXT_SNAPSHOT_VERSION} [skip ci]"
+
+        echo "Pushing commits and tags back to GitHub"
+        BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+        git push origin "HEAD:${BRANCH}" --follow-tags

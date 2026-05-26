@@ -1,0 +1,39 @@
+
+b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(È¹¶µ8Òı¾Š¥2
+b	java:S112#"FDefine and throw a dedicated exception instead of using a generic one.(ÍİÕç8Óı¾Š¥2
+g	java:S112q"FDefine and throw a dedicated exception instead of using a generic one.(«í­¶ıÿÿÿÿ8Óı¾Š¥2
+‰
+java:S1192Ù"kDefine a constant instead of duplicating this literal "Invalid file format. Allowed formats are: " 3 times.( º‰­8ìêèéã2
+c
+java:S1192"FDefine a constant instead of duplicating this literal ".jpeg" 3 times.(µƒ£8ğêèéã2
+d
+java:S1192"GDefine a constant instead of duplicating this literal "status" 3 times.(°­Şl8ñêèéã2
+¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(É¿µ®üÿÿÿÿ8ğÕûê‡2J$2961940d-1026-46f6-b85f-96ba06544399
+œ	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(üèÊĞ8ÇÂ¡•¢2J$9e49ce05-999d-4d6f-876e-a597d8a27803
+u	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(€Ïà\8áìèéã2
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ü…üÛûÿÿÿÿ8áìèéã2
+‚
+java:S1118":Add a private constructor to hide the implicit public one.(Âşóßøÿÿÿÿ8òÕûê‡2J$bc37a844-fd5a-417f-b410-819628a655ab
+t
+java:S2737"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(ö™û8Úş¾Š¥2
+o
+java:S3776#"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ÍİÕç8Üş¾Š¥2
+t
+java:S2737D"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(ö™û8àş¾Š¥2
+W	java:S125L"<This block of commented-out lines of code should be removed.(‡ĞŸ>8ğìèéã2
+u
+java:S2737"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(ö™û8âş¾Š¥2
+Y	java:S125Ä"<This block of commented-out lines of code should be removed.(å‹õş8õìèéã2
+L
+java:S1905İ")Remove this unnecessary cast to "double".(ÚÂ†õşÿÿÿÿ8øìèéã2
+L
+java:S1905ù")Remove this unnecessary cast to "double".(ÚÂ†õşÿÿÿÿ8ûìèéã2
+L
+java:S1905“")Remove this unnecessary cast to "double".(ÚÂ†õşÿÿÿÿ8ıìèéã2
+ 
+java:S1128"XRemove this unused import 'in.edu.kristujayanti.propertyBinder.KJUSYSCommonKeysPBinder'.(ïöúÿÿÿÿ8Ú¢•¢2J$8909f8bb-4a1f-4712-8c5c-710f3fe7bcb2
+€
+java:S1128"8Remove this unused import 'io.vertx.core.buffer.Buffer'.(àÜ­»üÿÿÿÿ8Ú¢•¢2J$50c1ae4d-66a9-4f33-8b5f-2bb14c07f0bf
+r
+java:S1128
+"/Remove this unused import 'java.util.Iterator'.(¥ÍòÕ8Ú¢•¢2J$0e6fb343-88c8-4f18-a300-a2c2b5b9eb6f

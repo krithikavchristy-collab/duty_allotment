@@ -1,0 +1,33 @@
+
+}
+java:S1192Q"`Define a constant instead of duplicating this literal "Unable to parse date string: {}" 5 times.(¢ËæÛ8•™Ôéã2
+h
+java:S1192?"KDefine a constant instead of duplicating this literal "yyyy-MM-dd" 6 times.(°ä‘ 8—™Ôéã2
+r
+java:S1192"PDefine a constant instead of duplicating this literal "Date is invalid" 3 times.(Ë°‰Ÿûÿÿÿÿ8—™Ôéã2
+†
+java:S1192N"iDefine a constant instead of duplicating this literal "Failed to parse '{}' with formatter '{}'" 4 times.(â¸ä…8–™Ôéã2
+m
+java:S1192A"KDefine a constant instead of duplicating this literal "yyyy/MM/dd" 4 times.(ş‹Öüÿÿÿÿ8•™Ôéã2
+o
+java:S1192½"LDefine a constant instead of duplicating this literal " is invalid" 3 times.(¡ñ¢ÿûÿÿÿÿ8•™Ôéã2
+
+java:S1192"KDefine a constant instead of duplicating this literal "dd-MM-yyyy" 5 times.(»ÓÛ‚8Ğ´‡Ş¶2J$8d4891b7-75ce-438b-a19f-23138375db0a
+€
+java:S1192"]Define a constant instead of duplicating this literal "Milliseconds cannot be null." 7 times.(¹¤ğ€ıÿÿÿÿ8”™Ôéã2
+p
+java:S1192"MDefine a constant instead of duplicating this literal "Asia/Kolkata" 6 times.(Èò“£ÿÿÿÿÿ8—™Ôéã2
+m
+java:S1192C"KDefine a constant instead of duplicating this literal "dd/MM/yyyy" 4 times.(›¼Æ›úÿÿÿÿ8–™Ôéã2
+i
+java:S1192½"FDefine a constant instead of duplicating this literal "Date " 3 times.(¡ñ¢ÿûÿÿÿÿ8—™Ôéã2
+R
+java:S1133""5Do not forget to remove this deprecated code someday.(Ğñ¼Ë8Ì™Ôéã2
+E
+java:S1123""(Add the missing @deprecated Javadoc tag.(Ğñ¼Ë8Î™Ôéã2
+_
+java:S18548"BRemove this useless assignment to local variable "dateTimeParser".(ÿ€—Õ8Ğ™Ôéã2
+K
+java:S24408".Remove this instantiation of "DateTimeParser".(ÿ€—Õ8Ò™Ôéã2
+P
+java:S14818"3Remove this unused "dateTimeParser" local variable.(ÿ€—Õ8Ó™Ôéã2

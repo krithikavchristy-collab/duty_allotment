@@ -1,0 +1,76 @@
+version: 0.2
+
+env:
+  variables:
+    AWS_REGION: "ap-south-1"
+    CODEARTIFACT_DOMAIN: "kjusys"
+    CODEARTIFACT_REPO: "kjusys-dev"
+    CODEARTIFACT_SERVER_ID: "codeartifact"
+
+phases:
+  pre_build:
+    commands:
+      - set -euo pipefail
+      - echo "Preparing Maven settings for CodeArtifact"
+      - mkdir -p "${HOME}/.m2"
+
+      - echo "Fetching CodeArtifact auth token"
+      - CODEARTIFACT_AUTH_TOKEN="$(aws codeartifact get-authorization-token --domain "${CODEARTIFACT_DOMAIN}" --region "${AWS_REGION}" --query authorizationToken --output text)"
+      - test -n "${CODEARTIFACT_AUTH_TOKEN}"
+
+      - echo "Fetching CodeArtifact Maven endpoint"
+      - CODEARTIFACT_MAVEN_ENDPOINT="$(aws codeartifact get-repository-endpoint --domain "${CODEARTIFACT_DOMAIN}" --repository "${CODEARTIFACT_REPO}" --format maven --region "${AWS_REGION}" --query repositoryEndpoint --output text)"
+      - test -n "${CODEARTIFACT_MAVEN_ENDPOINT}"
+
+      - echo "Writing ${HOME}/.m2/settings.xml"
+      - |
+        cat > "${HOME}/.m2/settings.xml" <<EOF
+        <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+          <servers>
+            <server>
+              <id>${CODEARTIFACT_SERVER_ID}</id>
+              <username>aws</username>
+              <password>${CODEARTIFACT_AUTH_TOKEN}</password>
+            </server>
+          </servers>
+          <mirrors>
+            <mirror>
+              <id>${CODEARTIFACT_SERVER_ID}</id>
+              <name>CodeArtifact</name>
+              <url>${CODEARTIFACT_MAVEN_ENDPOINT}</url>
+              <mirrorOf>*</mirrorOf>
+            </mirror>
+          </mirrors>
+          <profiles>
+            <profile>
+              <id>codeartifact</id>
+              <repositories>
+                <repository>
+                  <id>${CODEARTIFACT_SERVER_ID}</id>
+                  <url>${CODEARTIFACT_MAVEN_ENDPOINT}</url>
+                  <releases><enabled>true</enabled></releases>
+                  <snapshots><enabled>true</enabled></snapshots>
+                </repository>
+              </repositories>
+              <pluginRepositories>
+                <pluginRepository>
+                  <id>${CODEARTIFACT_SERVER_ID}</id>
+                  <url>${CODEARTIFACT_MAVEN_ENDPOINT}</url>
+                  <releases><enabled>true</enabled></releases>
+                  <snapshots><enabled>true</enabled></snapshots>
+                </pluginRepository>
+              </pluginRepositories>
+            </profile>
+          </profiles>
+          <activeProfiles>
+            <activeProfile>codeartifact</activeProfile>
+          </activeProfiles>
+        </settings>
+        EOF
+
+  build:
+    commands:
+      - echo "Publishing utils SNAPSHOT to CodeArtifact dev repo"
+      - mvn -B -DskipTests clean deploy -s "${HOME}/.m2/settings.xml" -DaltDeploymentRepository="${CODEARTIFACT_SERVER_ID}::default::${CODEARTIFACT_MAVEN_ENDPOINT}"

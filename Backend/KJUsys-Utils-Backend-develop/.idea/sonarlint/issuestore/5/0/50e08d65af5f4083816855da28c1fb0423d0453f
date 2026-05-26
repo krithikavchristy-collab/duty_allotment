@@ -1,0 +1,20 @@
+
+	java:S135Ί"YReduce the total number of break and continue statements in this loop to use at most one.(ÿΰ8Ώ¬Ά‘2J$17759e03-ba9c-4342-9375-c1aa5815662a
+{	java:S135‚"YReduce the total number of break and continue statements in this loop to use at most one.(³ΈΈΝϊÿÿÿÿ8Όφθιγ2
+f
+java:S2259"HA "NullPointerException" could be thrown; "subHeaders" is nullable here.(’υ8°ύθιγ2
+X	java:S125A"<This block of commented-out lines of code should be removed.(μηΫ8Ώύθιγ2
+u
+java:S3776¥"RRefactor this method to reduce its Cognitive Complexity from 30 to the 15 allowed.(τ©–άϊÿÿÿÿ8Ηύθιγ2
+X	java:S125i"<This block of commented-out lines of code should be removed.(ΖΡΖ8Λύθιγ2
+u
+java:S3776υ"RRefactor this method to reduce its Cognitive Complexity from 79 to the 15 allowed.(έοΘΰϊÿÿÿÿ8θύθιγ2
+W
+java:S2864΄"4Iterate over the "entrySet" instead of the "keySet".(‹Α”ύÿÿÿÿ8πύθιγ2
+n
+java:S6201Ό"PReplace this instanceof check and cast with 'instanceof Document nestedDocument'(ƒ…­ƒ8σύθιγ2
+Q
+java:S2864ΐ"4Iterate over the "entrySet" instead of the "keySet".(Ιλƒ,8τύθιγ2
+^	java:S125"<This block of commented-out lines of code should be removed.(†―Ϊόÿÿÿÿ8±ώθιγ2
+ι
+java:S6541υ"ΕA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 87 to 64, Complexity from 26 to 14, Nesting Level from 7 to 2, Number of Variables from 34 to 6.(έοΘΰϊÿÿÿÿ8΄ώθιγ2
