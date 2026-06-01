@@ -1,0 +1,55 @@
+:host {
+  display: block;
+}
+
+.dashboard-card {
+  width: 100%;
+  height: 207px;
+  background: #f2f2f2;
+  border-radius: 32px;
+  padding: 28px 20px;
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-header h2 {
+  font-size: 21px;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+}
+
+.icon-box {
+  margin-top: -6px;
+}
+
+.card-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 84px;
+  text-align: center;
+}
+
+.count {
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 400;
+  color: #000;
+}
+
+button {
+  margin-top: 28px;
+  width: 110px;
+  height: 29px;
+  background: #7181a7;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 10px;
+  border: none;
+}

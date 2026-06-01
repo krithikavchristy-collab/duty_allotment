@@ -1,35 +1,12 @@
-<section class="min-h-full bg-[#fafafd] px-[50px] pt-[39px]">
-
-  <div class="mb-[139px]">
-    <h1 class="text-[31px] leading-none font-bold text-black">
-      Welcome back,&nbsp; Dr. Sarah Jacob
-    </h1>
-
-    <p class="mt-[14px] text-[18px] text-black">
-      Here’s your duty overview for today
-    </p>
+<section class="dashboard-page">
+  <div class="welcome-section">
+    <h1>Welcome back,&nbsp; Dr. Sarah Jacob</h1>
+    <p>Here’s your duty overview for today</p>
   </div>
 
-  <div class="grid grid-cols-3 gap-[44px]">
-
-    <app-dashboard-card
-      title="Assigned Duties"
-      count="00"
-      iconType="calendar">
-    </app-dashboard-card>
-
-    <app-dashboard-card
-      title="Upcoming Duties"
-      count="00"
-      iconType="clock">
-    </app-dashboard-card>
-
-    <app-dashboard-card
-      title="Swap Request"
-      count="00"
-      iconType="swap">
-    </app-dashboard-card>
-
+  <div class="cards-wrapper">
+    <app-dashboard-card title="Assigned Duties" count="00" iconType="calendar"></app-dashboard-card>
+    <app-dashboard-card title="Upcoming Duties" count="00" iconType="clock"></app-dashboard-card>
+    <app-dashboard-card title="Swap Request" count="00" iconType="swap"></app-dashboard-card>
   </div>
-
 </section>
