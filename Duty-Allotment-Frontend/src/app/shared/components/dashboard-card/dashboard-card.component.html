@@ -1,0 +1,48 @@
+<div class="w-full h-[207px] bg-[#f2f2f2] rounded-[32px] px-5 pt-7 relative">
+
+  <div class="flex justify-between items-start">
+    <h2 class="text-[21px] font-normal text-black">
+      {{ title }}
+    </h2>
+
+    <div class="mt-[-6px]">
+
+      <svg *ngIf="iconType === 'calendar'" width="58" height="58" viewBox="0 0 64 64" fill="none">
+        <rect x="9" y="13" width="46" height="40" rx="8" stroke="#4f55dd" stroke-width="5"/>
+        <path d="M9 25H55" stroke="#4f55dd" stroke-width="5"/>
+        <path d="M21 7V17" stroke="#4f55dd" stroke-width="5" stroke-linecap="round"/>
+        <path d="M43 7V17" stroke="#4f55dd" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="22" cy="36" r="2.5" fill="#4f55dd"/>
+        <circle cx="32" cy="36" r="2.5" fill="#4f55dd"/>
+        <circle cx="42" cy="36" r="2.5" fill="#4f55dd"/>
+        <circle cx="22" cy="45" r="2.5" fill="#4f55dd"/>
+        <circle cx="32" cy="45" r="2.5" fill="#4f55dd"/>
+        <circle cx="42" cy="45" r="2.5" fill="#4f55dd"/>
+      </svg>
+
+      <svg *ngIf="iconType === 'clock'" width="58" height="58" viewBox="0 0 64 64" fill="none">
+        <rect x="11" y="11" width="42" height="42" rx="12" stroke="#51995a" stroke-width="5"/>
+        <path d="M32 22V34H43" stroke="#51995a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+
+      <svg *ngIf="iconType === 'swap'" width="58" height="58" viewBox="0 0 64 64" fill="none">
+        <path d="M18 22H48" stroke="#8e44ad" stroke-width="5" stroke-linecap="round"/>
+        <path d="M40 14L50 22L40 30" stroke="#8e44ad" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M46 42H16" stroke="#8e44ad" stroke-width="5" stroke-linecap="round"/>
+        <path d="M24 34L14 42L24 50" stroke="#8e44ad" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+
+    </div>
+  </div>
+
+  <div class="absolute left-0 right-0 top-[84px] text-center">
+    <div class="text-[50px] leading-none font-normal text-black">
+      {{ count }}
+    </div>
+
+    <button class="mt-7 w-[110px] h-[29px] bg-[#7181a7] text-white text-[14px] rounded-[10px] border-0">
+      View all
+    </button>
+  </div>
+
+</div>
