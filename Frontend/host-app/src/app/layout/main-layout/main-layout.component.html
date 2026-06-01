@@ -1,0 +1,17 @@
+<div class="h-screen bg-[#fafafd] flex flex-col overflow-hidden">
+
+  <app-header></app-header>
+
+  <div class="flex flex-1 min-h-0 overflow-hidden">
+
+    <app-sidebar class="h-full"></app-sidebar>
+
+    <main class="flex-1 bg-[#fafafd] overflow-auto">
+      <router-outlet></router-outlet>
+    </main>
+
+  </div>
+
+  <app-footer></app-footer>
+
+</div>
