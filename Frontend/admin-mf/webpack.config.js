@@ -2,14 +2,18 @@ const { shareAll, withModuleFederationPlugin } = require('@angular-architects/mo
 
 module.exports = withModuleFederationPlugin({
 
-  name: 'admin-mf',
+  name: 'adminMf',
 
   exposes: {
-    './Component': './src/app/app.component.ts',
+    './Module': './src/app/features/dashboard/dashboard.module.ts',
   },
 
   shared: {
-    ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
+    ...shareAll({
+      singleton: true,
+      strictVersion: true,
+      requiredVersion: 'auto'
+    }),
   },
 
 });
