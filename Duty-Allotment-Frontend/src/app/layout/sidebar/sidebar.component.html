@@ -1,25 +1,25 @@
-<aside class="w-[66px] h-full bg-white shadow-md flex flex-col items-center justify-between py-28">
+<aside class="w-[58px] h-full bg-white shadow-md flex flex-col items-center justify-between py-[110px]">
 
-  <nav class="flex flex-col items-center gap-10 text-black">
+  <nav class="flex flex-col items-center gap-[34px] text-black">
 
-    <a routerLink="/dashboard">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-        <rect x="3" y="3" width="7" height="7" rx="2"></rect>
-        <rect x="14" y="3" width="7" height="7" rx="2"></rect>
-        <rect x="3" y="14" width="7" height="7" rx="2"></rect>
-        <rect x="14" y="14" width="7" height="7" rx="2"></rect>
+    <a routerLink="/dashboard" routerLinkActive="text-blue-700" class="block" title="Dashboard">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <rect x="3" y="3" width="8" height="8" rx="2"></rect>
+        <rect x="13" y="3" width="8" height="8" rx="2"></rect>
+        <rect x="3" y="13" width="8" height="8" rx="2"></rect>
+        <rect x="13" y="13" width="8" height="8" rx="2"></rect>
       </svg>
     </a>
 
-    <a routerLink="/assigned-duties">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+    <a routerLink="/assigned-duties" routerLinkActive="text-blue-700" class="block" title="Assigned Duties">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
         <circle cx="12" cy="7" r="4"></circle>
-        <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"></path>
+        <path d="M4 21c0-4.5 3.5-7 8-7s8 2.5 8 7"></path>
       </svg>
     </a>
 
-    <a routerLink="/swap-request">
-      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+    <a routerLink="/swap-request" routerLinkActive="text-blue-700" class="block" title="Swap Request">
+      <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
         <path d="M16 3l4 4-4 4"></path>
         <path d="M4 7h16"></path>
         <path d="M8 21l-4-4 4-4"></path>
@@ -27,8 +27,8 @@
       </svg>
     </a>
 
-    <a routerLink="/duty-history">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+    <a routerLink="/duty-history" routerLinkActive="text-blue-700" class="block" title="Duty History">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
         <circle cx="12" cy="12" r="10"></circle>
         <rect x="11" y="6" width="2" height="7" fill="white"></rect>
         <rect x="12" y="12" width="6" height="2" fill="white"></rect>
@@ -37,9 +37,9 @@
 
   </nav>
 
-  <button class="text-black">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5v-3H6V6h4V3z"></path>
+  <button class="text-black" title="Logout">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M10 3H5a2 2 0 00-2 2v14a2 2 0 002 2h5v-3H6V6h4V3z"></path>
       <path d="M15 7l5 5-5 5v-3H9v-4h6V7z"></path>
     </svg>
   </button>

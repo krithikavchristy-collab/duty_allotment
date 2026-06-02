@@ -1,11 +1,17 @@
-<app-header></app-header>
+<div class="h-screen flex flex-col bg-[#fafafd] overflow-hidden">
 
-<div class="flex min-h-[calc(100vh-110px)]">
-  <app-sidebar></app-sidebar>
+  <app-header></app-header>
 
-  <main class="flex-1">
-    <router-outlet></router-outlet>
-  </main>
+  <div class="flex flex-1 min-h-0 overflow-hidden">
+
+    <app-sidebar></app-sidebar>
+
+    <main class="flex-1 overflow-auto bg-[#fafafd]">
+      <router-outlet></router-outlet>
+    </main>
+
+  </div>
+
+  <app-footer></app-footer>
+
 </div>
-
-<app-footer></app-footer>
