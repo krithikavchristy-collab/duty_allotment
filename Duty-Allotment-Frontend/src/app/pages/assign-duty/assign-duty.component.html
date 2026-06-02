@@ -1,1 +1,149 @@
-<p>assign-duty works!</p>
+<section class="min-h-full bg-[#fafafd] px-[65px] pt-[22px]">
+
+  <h1 class="text-[40px] font-bold text-black">
+    Assign Duty
+  </h1>
+
+  <!-- Duty Details -->
+  <div class="mt-[55px] ml-[50px]">
+    <h2 class="text-[18px] font-semibold mb-[20px]">Duty Details</h2>
+
+    <div class="w-[690px] h-[172px] bg-white border border-gray-200 rounded-[14px] px-[42px] py-[22px] grid grid-cols-2 gap-y-[28px]">
+
+      <div class="flex items-center gap-[28px]">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <rect x="4" y="5" width="16" height="15" rx="2" stroke="black" stroke-width="1.5"/>
+          <path d="M4 9H20" stroke="black" stroke-width="1.5"/>
+        </svg>
+        <span class="text-[18px]">Exam Duty</span>
+      </div>
+
+      <div class="flex items-center gap-[28px]">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M7 3H15L19 7V21H7V3Z" stroke="#50679c" stroke-width="1.5"/>
+          <path d="M15 3V8H19" stroke="#50679c" stroke-width="1.5"/>
+          <path d="M10 12H16M10 16H15" stroke="#50679c" stroke-width="1.5"/>
+        </svg>
+        <span class="text-[18px]">End Sem Exam</span>
+      </div>
+
+      <div class="flex items-center gap-[28px]">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <rect x="4" y="5" width="16" height="15" rx="2" stroke="#50679c" stroke-width="1.5"/>
+          <path d="M4 9H20M8 3V7M16 3V7" stroke="#50679c" stroke-width="1.5"/>
+          <path d="M8 13H9M12 13H13M16 13H17M8 16H9M12 16H13M16 16H17" stroke="#50679c" stroke-width="1.8"/>
+        </svg>
+        <span class="text-[18px]">05 May 2026</span>
+      </div>
+
+      <div class="flex items-center gap-[28px]">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="9" stroke="#50679c" stroke-width="1.5"/>
+          <path d="M12 7V12L16 14" stroke="#50679c" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="text-[18px]">9:00 AM -11:00 AM</span>
+      </div>
+
+      <div class="flex items-center gap-[28px]">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M12 21S5 15.5 5 10A7 7 0 0 1 19 10C19 15.5 12 21 12 21Z" stroke="#50679c" stroke-width="1.5"/>
+          <circle cx="12" cy="10" r="2.5" stroke="#50679c" stroke-width="1.5"/>
+        </svg>
+        <span class="text-[18px]">Block A&nbsp; - 101</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Select Faculty -->
+  <div class="mt-[30px] ml-[62px]">
+    <h2 class="text-[18px] font-semibold mb-[14px]">Select Faculty</h2>
+
+    <div class="flex items-start gap-[140px]">
+
+      <!-- Left Table Area -->
+      <div class="w-[560px]">
+
+        <div class="flex items-center gap-[46px]">
+          <div class="w-[392px] h-[48px] bg-white border border-gray-200 rounded-[10px] flex items-center px-4">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" class="mr-3">
+              <circle cx="11" cy="11" r="7" stroke="#94a3b8" stroke-width="2"/>
+              <path d="M16 16L21 21" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <input
+              placeholder="Search Faculty..."
+              class="w-full bg-transparent outline-none text-[18px] placeholder:text-gray-400"
+            />
+          </div>
+
+          <button class="w-[102px] h-[42px] bg-white border border-gray-200 rounded-[9px] flex items-center justify-center gap-2 text-[17px] text-gray-600">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M4 5H20L14 12V18L10 20V12L4 5Z" stroke="#64748b" stroke-width="1.7"/>
+            </svg>
+            Filters
+          </button>
+        </div>
+
+        <table class="w-full mt-[25px] text-left">
+          <thead>
+            <tr class="h-[40px] text-[13px] text-gray-500 font-bold">
+              <th class="w-[58px]">
+                <span class="w-[18px] h-[18px] border border-gray-300 rounded-[4px] block"></span>
+              </th>
+              <th class="w-[150px]">EMP ID</th>
+              <th class="w-[145px]">NAME</th>
+              <th>STATUS</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="h-[62px] border-b border-gray-100 text-[17px]">
+              <td>
+                <span class="w-[20px] h-[20px] border border-gray-300 rounded-[4px] block"></span>
+              </td>
+              <td>EMP ID -111</td>
+              <td class="text-gray-600">Alice Green</td>
+              <td>
+                <span class="bg-[#fff4dc] text-orange-500 px-5 py-2 rounded-[10px] text-[14px]">
+                  Busy
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="mt-[70px] border-t border-gray-200 h-[66px] flex items-center justify-between text-[13px] text-gray-500">
+          <div class="flex items-center gap-3">
+            <span>Rows per page</span>
+            <button class="w-[48px] h-[28px] bg-white border border-gray-200 rounded-[7px] text-black">
+              10⌄
+            </button>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <span>1 - 10 of 25</span>
+            <span class="text-gray-300">‹</span>
+            <span class="w-[28px] h-[28px] bg-blue-600 text-white rounded-[8px] flex items-center justify-center shadow">
+              1
+            </span>
+            <span class="text-gray-700">2</span>
+            <span class="text-gray-700">3</span>
+            <span class="text-gray-300">›</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Selected Faculty Box -->
+      <div class="w-[400px] h-[286px] bg-white border border-[#ecdede] rounded-[14px] px-[18px] pt-[16px] relative">
+        <h2 class="text-[18px] font-semibold">Selected Faculty</h2>
+
+        <button class="absolute right-[34px] bottom-[30px] w-[96px] h-[38px] bg-blue-600 text-white rounded-[8px] text-[14px] shadow">
+          Assign Duty
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+</section>
