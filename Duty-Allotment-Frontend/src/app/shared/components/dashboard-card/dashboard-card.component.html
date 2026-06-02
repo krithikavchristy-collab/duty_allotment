@@ -1,46 +1,48 @@
-<div class="w-full h-[207px] bg-[#f2f2f2] rounded-[32px] px-5 pt-7 relative">
+<div class="w-[305px] h-[265px] bg-[#e9efff] rounded-[30px] px-7 py-6">
 
-  <div class="flex justify-between items-start">
-    <h2 class="text-[21px] font-normal text-black">
+  <div class="flex items-center gap-8">
+
+    <svg *ngIf="iconType === 'calendar'" width="58" height="58" viewBox="0 0 64 64" fill="none">
+      <rect x="10" y="14" width="44" height="42" rx="8" stroke="black" stroke-width="5"/>
+      <path d="M10 26H54" stroke="black" stroke-width="5"/>
+      <path d="M22 8V18" stroke="black" stroke-width="5" stroke-linecap="round"/>
+      <path d="M42 8V18" stroke="black" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="22" cy="37" r="2.5" fill="black"/>
+      <circle cx="32" cy="37" r="2.5" fill="black"/>
+      <circle cx="42" cy="37" r="2.5" fill="black"/>
+      <circle cx="22" cy="47" r="2.5" fill="black"/>
+      <circle cx="32" cy="47" r="2.5" fill="black"/>
+      <circle cx="42" cy="47" r="2.5" fill="black"/>
+    </svg>
+
+    <svg *ngIf="iconType === 'swap'" width="64" height="64" viewBox="0 0 64 64" fill="none">
+      <path d="M14 22H48" stroke="black" stroke-width="5" stroke-linecap="round"/>
+      <path d="M40 12L52 22L40 32" stroke="black" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M50 43H16" stroke="black" stroke-width="5" stroke-linecap="round"/>
+      <path d="M24 33L12 43L24 53" stroke="black" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+    <svg *ngIf="iconType === 'clock'" width="64" height="64" viewBox="0 0 64 64" fill="none">
+      <rect x="10" y="10" width="44" height="44" rx="14" stroke="black" stroke-width="5"/>
+      <path d="M32 20V34L43 42" stroke="black" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+    <h2 class="text-[24px] font-medium text-black">
       {{ title }}
     </h2>
 
-    <div class="mt-[-6px]">
-
-      <svg *ngIf="iconType === 'calendar'" width="58" height="58" viewBox="0 0 64 64" fill="none">
-        <rect x="9" y="13" width="46" height="40" rx="8" stroke="#4f55dd" stroke-width="5"/>
-        <path d="M9 25H55" stroke="#4f55dd" stroke-width="5"/>
-        <path d="M21 7V17" stroke="#4f55dd" stroke-width="5" stroke-linecap="round"/>
-        <path d="M43 7V17" stroke="#4f55dd" stroke-width="5" stroke-linecap="round"/>
-        <circle cx="22" cy="36" r="2.5" fill="#4f55dd"/>
-        <circle cx="32" cy="36" r="2.5" fill="#4f55dd"/>
-        <circle cx="42" cy="36" r="2.5" fill="#4f55dd"/>
-        <circle cx="22" cy="45" r="2.5" fill="#4f55dd"/>
-        <circle cx="32" cy="45" r="2.5" fill="#4f55dd"/>
-        <circle cx="42" cy="45" r="2.5" fill="#4f55dd"/>
-      </svg>
-
-      <svg *ngIf="iconType === 'clock'" width="58" height="58" viewBox="0 0 64 64" fill="none">
-        <rect x="11" y="11" width="42" height="42" rx="12" stroke="#51995a" stroke-width="5"/>
-        <path d="M32 22V34H43" stroke="#51995a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-
-      <svg *ngIf="iconType === 'swap'" width="58" height="58" viewBox="0 0 64 64" fill="none">
-        <path d="M18 22H48" stroke="#8e44ad" stroke-width="5" stroke-linecap="round"/>
-        <path d="M40 14L50 22L40 30" stroke="#8e44ad" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M46 42H16" stroke="#8e44ad" stroke-width="5" stroke-linecap="round"/>
-        <path d="M24 34L14 42L24 50" stroke="#8e44ad" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-
-    </div>
   </div>
 
-  <div class="absolute left-0 right-0 top-[84px] text-center">
-    <div class="text-[50px] leading-none font-normal text-black">
+  <div class="text-center mt-5">
+    <h3 class="text-[64px] leading-none font-normal text-black">
       {{ count }}
-    </div>
+    </h3>
 
-    <button class="mt-7 w-[110px] h-[29px] bg-[#7181a7] text-white text-[14px] rounded-[10px] border-0">
+    <p class="mt-4 text-[14px] text-gray-500">
+      {{ description }}
+    </p>
+
+    <button class="mt-5 w-[95px] h-[25px] bg-black text-white text-[13px] rounded-[8px]">
       View all
     </button>
   </div>
