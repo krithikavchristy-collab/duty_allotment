@@ -1,34 +1,149 @@
-<section class="w-full min-h-full bg-[#fafafd] px-[50px] pt-[39px]">
+<section class="w-full min-h-screen bg-[#fafafd] px-[120px] pt-[50px] pb-10">
 
-  <div class="mb-[139px]">
-    <h1 class="text-[31px] leading-none font-bold text-black">
-      Welcome back,&nbsp; Dr. Sarah Jacob
-    </h1>
-
-    <p class="mt-[14px] text-[18px] text-black">
-      Here’s your duty overview for today
-    </p>
-  </div>
-
-  <div class="grid grid-cols-3 gap-[44px]">
+  <!-- Cards -->
+  <div class="flex justify-center gap-[90px]">
 
     <app-dashboard-card
       title="Assigned Duties"
       count="00"
+      description="Duties assigned to you"
       iconType="calendar">
-    </app-dashboard-card>
-
-    <app-dashboard-card
-      title="Upcoming Duties"
-      count="00"
-      iconType="clock">
     </app-dashboard-card>
 
     <app-dashboard-card
       title="Swap Request"
       count="00"
+      description="Requests to review"
       iconType="swap">
     </app-dashboard-card>
+
+    <app-dashboard-card
+      title="Upcoming Duties"
+      count="00"
+      description="Duties scheduled"
+      iconType="clock">
+    </app-dashboard-card>
+
+  </div>
+
+  <!-- Calendar Section -->
+  <div class="mt-[60px] flex justify-center">
+
+    <div
+      class="w-[680px] h-[480px] border border-black rounded-[6px] bg-[#f8f8f8] flex items-center justify-center">
+
+      <div class="w-[450px] bg-white px-[30px] py-[20px]">
+
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-8">
+
+          <h2 class="text-[24px] font-bold">
+            October 2020
+          </h2>
+
+          <div class="flex items-center text-black text-[22px] font-bold gap-2">
+            <span>‹</span>
+            <span>›</span>
+          </div>
+
+        </div>
+
+        <!-- Weekdays -->
+        <div
+          class="grid grid-cols-7 text-center text-[15px] font-medium mb-4">
+
+          <span>Mo</span>
+          <span>Tu</span>
+          <span>We</span>
+          <span>Th</span>
+          <span>Fr</span>
+          <span>Sa</span>
+          <span>Su</span>
+
+        </div>
+
+        <!-- Dates -->
+        <div
+          class="grid grid-cols-7 text-center text-[15px] gap-y-4">
+
+          <span></span>
+          <span></span>
+          <span></span>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+
+          <span>5</span>
+          <span>6</span>
+          <span>7</span>
+          <span>8</span>
+          <span>9</span>
+          <span>10</span>
+          <span>11</span>
+
+          <span>12</span>
+          <span>13</span>
+
+          <span class="flex justify-center">
+            <span
+              class="w-[58px] h-[30px] bg-[#5aa164] rounded-full flex items-center justify-center">
+              14
+            </span>
+          </span>
+
+          <span>15</span>
+          <span>16</span>
+          <span>17</span>
+          <span>18</span>
+
+          <span>19</span>
+          <span>20</span>
+          <span>21</span>
+          <span>22</span>
+          <span>23</span>
+          <span>24</span>
+          <span>25</span>
+
+          <span>26</span>
+          <span>27</span>
+          <span>28</span>
+          <span>29</span>
+          <span>30</span>
+          <span>31</span>
+          <span></span>
+
+        </div>
+
+        <!-- Divider -->
+        <div
+          class="w-[250px] h-[1px] bg-gray-500 mx-auto mt-5 mb-5">
+        </div>
+
+        <!-- Events -->
+        <div class="text-black">
+
+          <p class="text-[11px]">
+            9:30 AM - 12:30 PM
+          </p>
+
+          <p class="text-[15px] font-semibold mb-4">
+            Exam Duty
+          </p>
+
+          <p class="text-[11px]">
+            2:30 PM - 4:30 PM
+          </p>
+
+          <p class="text-[15px] font-semibold">
+            Interview Duty
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
 
   </div>
 
