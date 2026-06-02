@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class FacultyManagementComponent {
 
+  facultyList = [
+    {
+      empId: 'EMP 011',
+      name: 'Dr.John',
+      department: 'Computer Science',
+      designation: 'Professor',
+      status: 'Pending'
+    }
+  ];
+
 }

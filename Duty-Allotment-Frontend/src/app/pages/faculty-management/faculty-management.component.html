@@ -1,76 +1,100 @@
-<section class="min-h-full bg-[#fafafd] px-[68px] pt-[30px]">
+<section class="min-h-full bg-[#fafafd] px-[68px] pt-[18px]">
 
-  <h1 class="text-[42px] font-bold text-black">
+  <h1 class="text-[34px] font-bold text-black">
     Faculty Management
   </h1>
 
-  <div class="mt-[58px] flex items-center gap-[72px]">
+  <div class="mt-[58px] flex items-center gap-[58px]">
 
-    <div class="w-[610px] h-[70px] bg-white border border-gray-200 rounded-[18px] flex items-center px-7">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-gray-300 mr-5">
-        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle>
-        <path d="M16 16L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-      </svg>
+    <div class="w-[500px] h-[56px] bg-white border border-gray-200 rounded-[15px] flex items-center px-6">
+      <span class="text-[26px] text-gray-300 mr-4">⌕</span>
 
       <input
         type="text"
         placeholder="Search Faculty..."
-        class="w-full bg-transparent outline-none text-[28px] placeholder:text-gray-300"
+        class="w-full bg-transparent outline-none text-[24px] placeholder:text-gray-300"
       />
     </div>
 
-    <button class="w-[115px] h-[45px] bg-white border border-gray-200 rounded-[10px] flex items-center justify-center gap-2 text-[18px] text-gray-500">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-        <path d="M4 5h16l-6 7v6l-4 2v-8L4 5z" stroke="currentColor" stroke-width="2"/>
-      </svg>
+    <button class="w-[96px] h-[40px] bg-white border border-gray-200 rounded-[10px] flex items-center justify-center gap-2 text-[15px] text-gray-500">
+      <span>♡</span>
       Filters
     </button>
 
-    <button class="w-[122px] h-[48px] bg-blue-600 text-white rounded-[10px] text-[18px] shadow-lg">
+    <button class="w-[103px] h-[42px] bg-blue-600 text-white rounded-[8px] text-[15px] shadow-lg">
       + Add Faculty
     </button>
 
   </div>
 
-  <div class="mt-[40px] ml-[25px] w-[1260px]">
+  <div class="mt-[30px] ml-[27px] w-[1010px]">
 
     <table class="w-full text-left">
       <thead>
-        <tr class="h-[55px] border-b border-gray-200 text-gray-500 text-[14px] tracking-wide">
-          <th class="w-[60px]">
-            <span class="w-[20px] h-[20px] border border-gray-300 rounded-[4px] block"></span>
+        <tr class="h-[48px] border-b border-gray-200 text-gray-500 text-[12px] font-bold tracking-wide">
+          <th class="w-[55px]">
+            <span class="w-[16px] h-[16px] border border-gray-300 rounded-[4px] block"></span>
           </th>
-          <th class="w-[170px]">EMP ID</th>
-          <th class="w-[220px]">NAME</th>
-          <th class="w-[250px]">DEPARTMENT</th>
-          <th class="w-[220px]">DESIGNATION</th>
-          <th class="w-[220px]">STATUS</th>
+          <th class="w-[140px]">EMP ID</th>
+          <th class="w-[170px]">NAME</th>
+          <th class="w-[220px]">DEPARTMENT</th>
+          <th class="w-[190px]">DESIGNATION</th>
+          <th class="w-[170px]">STATUS</th>
           <th>ACTIONS</th>
         </tr>
       </thead>
 
       <tbody>
-        <tr class="h-[320px]">
+        <tr class="h-[65px] border-b border-gray-100 text-[13px] text-black">
+          <td>
+            <span class="w-[16px] h-[16px] border border-gray-300 rounded-[4px] block"></span>
+          </td>
+
+          <td class="font-bold">EMP 011</td>
+          <td class="font-medium">Dr.John</td>
+          <td>Computer Science</td>
+          <td class="font-bold">Professor</td>
+
+          <td>
+            <span class="bg-[#fff3dc] text-orange-500 px-3 py-1 rounded-[6px] text-[11px]">
+              Pending
+            </span>
+          </td>
+
+          <td>
+            <div class="flex items-center gap-4 text-gray-400 text-[14px]">
+              <span>⊙</span>
+              <span>♢</span>
+              <span>▥</span>
+              <span>⋮</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="h-[200px]">
           <td colspan="7"></td>
         </tr>
       </tbody>
     </table>
 
-    <div class="border-t border-gray-200 h-[70px] flex items-center justify-between px-5 text-[14px] text-gray-500">
+    <div class="border-t border-gray-200 h-[70px] flex items-center justify-between px-4 text-[13px] text-gray-500">
 
       <div class="flex items-center gap-3">
         <span>Rows per page</span>
-        <button class="w-[64px] h-[34px] border border-gray-200 bg-white rounded-[8px] text-black">
+
+        <button class="w-[55px] h-[30px] bg-white border border-gray-200 rounded-[7px] text-black">
           10⌄
         </button>
       </div>
 
-      <div class="flex items-center gap-5">
+      <div class="flex items-center gap-4">
         <span>1 - 10 of 25</span>
         <span class="text-gray-300">‹</span>
-        <span class="w-[34px] h-[34px] bg-blue-600 text-white rounded-[10px] flex items-center justify-center shadow-lg">
+
+        <span class="w-[30px] h-[30px] bg-blue-600 text-white rounded-[8px] flex items-center justify-center shadow-lg">
           1
         </span>
+
         <span class="text-gray-700">2</span>
         <span class="text-gray-700">3</span>
         <span class="text-gray-300">›</span>
