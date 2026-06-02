@@ -12,6 +12,12 @@ import { AssignedDutiesComponent } from './pages/assigned-duties/assigned-duties
 import { SwapRequestComponent } from './pages/swap-request/swap-request.component';
 import { DutyHistoryComponent } from './pages/duty-history/duty-history.component';
 import { DashboardCardComponent } from './shared/components/dashboard-card/dashboard-card.component';
+import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard.component';
+import { FacultyManagementComponent } from './pages/faculty-management/faculty-management.component';
+import { CreateDutyComponent } from './pages/create-duty/create-duty.component';
+import { AssignDutyComponent } from './pages/assign-duty/assign-duty.component';
+import { AdminSwapRequestComponent } from './pages/admin-swap-request/admin-swap-request.component';
+import { DutyRecordsComponent } from './pages/duty-records/duty-records.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,13 @@ import { DashboardCardComponent } from './shared/components/dashboard-card/dashb
     AssignedDutiesComponent,
     SwapRequestComponent,
     DutyHistoryComponent,
-    DashboardCardComponent
+    DashboardCardComponent,
+    AdminDashboardComponent,
+    FacultyManagementComponent,
+    CreateDutyComponent,
+    AssignDutyComponent,
+    AdminSwapRequestComponent,
+    DutyRecordsComponent
   ],
   imports: [
     BrowserModule,
