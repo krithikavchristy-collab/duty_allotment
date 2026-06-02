@@ -4,6 +4,7 @@
     Duty Swap Request
   </h1>
 
+  <!-- Tabs -->
   <div class="mt-[92px] ml-[43px] w-[1040px] border-b border-gray-200 flex items-end gap-10">
     <a
       routerLink="/swap-request"
@@ -18,34 +19,45 @@
     </a>
   </div>
 
+  <!-- Duty + Swap With Row -->
   <div class="mt-[75px] ml-[43px] flex items-center gap-[64px]">
 
-    <div class="w-[405px] h-[156px] bg-[#e9efff] rounded-[30px] px-7 py-4">
-      <h2 class="text-[23px] font-bold mb-5">My Duty</h2>
+    <!-- My Duty Card -->
+    <div class="w-[405px] h-[156px] bg-[#e9efff] rounded-[30px] px-[22px] pt-[12px]">
+      <h2 class="text-[23px] font-bold mb-[20px]">
+        My Duty
+      </h2>
 
-      <div class="flex items-center gap-7">
-        <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+      <div class="flex items-center">
+
+        <!-- duty icon -->
+        <svg width="34" height="34" viewBox="0 0 64 64" fill="none" class="mr-[18px]">
           <rect x="18" y="8" width="28" height="48" rx="8" stroke="black" stroke-width="4"/>
           <path d="M26 20H38M26 32H38M26 44H34" stroke="black" stroke-width="4" stroke-linecap="round"/>
         </svg>
 
-        <h3 class="text-[22px] font-medium">Interview Duty</h3>
+        <h3 class="text-[22px] font-medium whitespace-nowrap mr-[40px]">
+          Interview Duty
+        </h3>
 
-        <svg width="25" height="25" viewBox="0 0 64 64" fill="none">
+        <!-- calendar icon -->
+        <svg width="24" height="24" viewBox="0 0 64 64" fill="none" class="mr-[14px]">
           <rect x="10" y="14" width="44" height="42" rx="8" stroke="black" stroke-width="3"/>
           <path d="M10 26H54" stroke="black" stroke-width="3"/>
           <path d="M22 8V18M42 8V18" stroke="black" stroke-width="3"/>
         </svg>
 
-        <div>
-          <p class="text-[14px] font-bold">Date/time</p>
-          <p class="text-[12px] mt-3">21 - May - 2026</p>
-          <p class="text-[11px] mt-4">10:00 AM - 11:00 PM</p>
+        <div class="leading-tight">
+          <p class="text-[14px] font-bold whitespace-nowrap">Date/time</p>
+          <p class="text-[12px] mt-[13px] whitespace-nowrap">21 - May - 2026</p>
+          <p class="text-[11px] mt-[13px] whitespace-nowrap">10:00 AM - 11:00 PM</p>
         </div>
+
       </div>
     </div>
 
-    <div>
+    <!-- Swap Icon -->
+    <div class="w-[70px] flex justify-center">
       <svg width="48" height="48" viewBox="0 0 64 64" fill="none">
         <path d="M14 22H48" stroke="black" stroke-width="4" stroke-linecap="round"/>
         <path d="M40 12L52 22L40 32" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -54,10 +66,15 @@
       </svg>
     </div>
 
-    <div class="w-[420px] h-[156px] bg-[#e9efff] rounded-[30px] px-7 py-4">
-      <h2 class="text-[23px] font-bold mb-6">Swap With</h2>
+    <!-- Swap With Card -->
+    <div class="w-[420px] h-[156px] bg-[#e9efff] rounded-[30px] px-[28px] pt-[14px]">
+      <h2 class="text-[23px] font-bold mb-[26px]">
+        Swap With
+      </h2>
 
-      <label class="text-[11px] font-semibold">Select Faculty</label>
+      <label class="text-[11px] font-semibold">
+        Select Faculty
+      </label>
 
       <select class="mt-2 w-full h-[28px] bg-white border border-gray-300 rounded-[4px] px-3 text-[11px] text-gray-500 outline-none">
         <option>Choose Faculty Member</option>
@@ -66,18 +83,21 @@
 
   </div>
 
-  <div class="mt-[26px] ml-[43px] w-[665px] h-[190px] bg-[#e9efff] rounded-[24px] px-7 py-4">
-    <h2 class="text-[20px] font-bold">Reason for Swap Request</h2>
+  <!-- Reason Box -->
+  <div class="mt-[26px] ml-[43px] w-[665px] h-[190px] bg-[#e9efff] rounded-[24px] px-[28px] pt-[12px] relative">
+
+    <h2 class="text-[20px] font-bold">
+      Reason for Swap Request
+    </h2>
 
     <textarea
-      class="mt-2 w-[565px] h-[110px] bg-white rounded-[26px] resize-none outline-none px-5 py-4 text-[12px]"
+      class="mt-[10px] w-[565px] h-[108px] bg-white rounded-[26px] resize-none outline-none px-5 py-4 text-[12px]"
       placeholder="Enter the Reason for Requesting Swap..."></textarea>
 
-    <div class="flex justify-end pr-3">
-      <button class="w-[98px] h-[30px] bg-blue-500 text-white text-[23px] rounded-[8px] leading-none">
-        Submit
-      </button>
-    </div>
+    <button class="absolute right-[37px] bottom-[8px] w-[98px] h-[30px] bg-blue-500 text-white text-[23px] rounded-[8px] leading-none">
+      Submit
+    </button>
+
   </div>
 
 </section>
