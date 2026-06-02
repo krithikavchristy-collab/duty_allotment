@@ -1,1 +1,68 @@
-<p>duty-history works!</p>
+<section class="min-h-full bg-[#fafafd] px-[74px] pt-[10px]">
+  <h1 class="text-[40px] font-bold text-black">Duty History</h1>
+
+  <div class="mt-[82px] ml-[58px] flex items-start justify-between w-[1010px]">
+    <div>
+      <h2 class="text-[29px] font-medium text-black">Past Duty Records</h2>
+      <p class="mt-[14px] text-[21px] text-black">
+        view your previously Assigned and Completed Duties
+      </p>
+    </div>
+
+    <input
+      type="text"
+      placeholder="Search Duties"
+      class="w-[450px] h-[50px] bg-white border border-gray-300 rounded-[5px] px-6 text-[15px] placeholder:text-gray-300 outline-none"
+    />
+  </div>
+
+  <div class="mt-[42px] ml-[58px] w-[1060px]">
+    <table class="w-full text-left">
+      <thead>
+        <tr class="h-[54px] text-[12px] font-bold text-gray-500 tracking-widest">
+          <th class="w-[170px]">DUTY NAME↕</th>
+          <th class="w-[170px]">DATE</th>
+          <th class="w-[170px]">TIME</th>
+          <th class="w-[210px]">PLACE/ROOMNO</th>
+          <th class="w-[130px]">STATUS</th>
+          <th>ASSIGNEE <span class="text-blue-500">⌃</span></th>
+        </tr>
+      </thead>
+
+      <tbody class="text-[16px]">
+        <tr class="h-[78px] border-b border-gray-100">
+          <td class="font-bold">Exam Duty</td>
+          <td class="font-bold">02-may-2026</td>
+          <td class="text-gray-700">10:00-12:00</td>
+          <td class="font-bold">Admin Block A202</td>
+          <td>
+            <span class="bg-green-50 text-green-600 px-3 py-1 rounded text-[12px]">completed</span>
+          </td>
+          <td class="text-gray-700">Alice Green</td>
+        </tr>
+
+        <tr class="h-[78px] border-b border-gray-100">
+          <td class="font-bold">Interview Duty</td>
+          <td class="font-bold">04-may-2026</td>
+          <td class="text-gray-700">9:00-1:00</td>
+          <td class="font-bold">Admin Block A202</td>
+          <td>
+            <span class="bg-green-50 text-green-600 px-3 py-1 rounded text-[12px]">completed</span>
+          </td>
+          <td class="text-gray-700">Alice Green</td>
+        </tr>
+
+        <tr class="h-[78px] border-b border-gray-100">
+          <td class="font-bold">Admission Duty</td>
+          <td class="font-bold">08-may-2026</td>
+          <td class="text-gray-700">1:00-3:45</td>
+          <td class="font-bold">Admin Block A202</td>
+          <td>
+            <span class="bg-green-50 text-green-600 px-3 py-1 rounded text-[12px]">completed</span>
+          </td>
+          <td class="text-gray-700">Alice Green</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
