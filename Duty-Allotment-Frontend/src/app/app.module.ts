@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,25 +33,24 @@ import { DashboardCardComponent } from './shared/components/dashboard-card/dashb
     SidebarComponent,
     FooterComponent,
     MainLayoutComponent,
-
     DashboardComponent,
     AssignedDutiesComponent,
     SwapRequestComponent,
     ReceivedRequestComponent,
     DutyHistoryComponent,
-
     AdminDashboardComponent,
     FacultyManagementComponent,
     CreateDutyComponent,
     AssignDutyComponent,
     AdminSwapRequestComponent,
     DutyRecordsComponent,
-
     DashboardCardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
