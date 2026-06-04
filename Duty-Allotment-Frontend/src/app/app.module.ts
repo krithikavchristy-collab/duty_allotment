@@ -50,7 +50,8 @@ import { DashboardCardComponent } from './shared/components/dashboard-card/dashb
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

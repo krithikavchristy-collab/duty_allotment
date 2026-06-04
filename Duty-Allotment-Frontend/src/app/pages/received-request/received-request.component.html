@@ -1,46 +1,46 @@
 <section class="min-h-full bg-[#fafafd] px-8 pt-7">
 
   <!-- Page Title -->
-  <h1 class="text-2xl font-semibold text-gray-900 mb-6">Duty Swap</h1>
+  <h1 class="text-[22px] font-semibold text-gray-900 mb-5">Duty Swap</h1>
 
   <!-- Tabs -->
-  <div class="flex items-center gap-2 mb-8">
+  <div class="flex items-center gap-1 mb-0">
     <a routerLink="/swap-request"
-       class="px-5 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-gray-700">
+       class="px-6 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-gray-700">
       Request New Swap
     </a>
     <a routerLink="/received-request"
-       class="px-5 py-2 rounded-md text-sm font-medium bg-blue-600 text-white">
+       class="px-6 py-2 rounded-md text-sm font-semibold bg-blue-600 text-white">
       Received Request
     </a>
   </div>
 
-  <hr class="border-gray-200 mb-6">
+  <hr class="border-gray-200 mt-3 mb-7">
 
   <!-- Request Card -->
-  <div class="w-[650px] border border-gray-200 rounded-xl bg-white p-4 flex items-center justify-between">
+  <div class="w-[560px] border border-gray-200 rounded-xl bg-white px-5 py-4 flex items-center justify-between gap-4">
 
-    <div class="flex items-start gap-4">
+    <div class="flex items-start gap-3">
       <!-- Avatar -->
       <img src="assets/images/Avatar.jpg"
            alt="Avatar"
-           class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+           class="w-9 h-9 rounded-full object-cover flex-shrink-0 mt-1">
 
       <div>
-        <p class="text-sm font-semibold text-gray-800 mb-1">Dr. maria william</p>
-        <p class="text-xs text-gray-600">Exam Duty - 22 may 2026</p>
-        <p class="text-xs text-gray-600">9:00 AM - 12:00 PM</p>
-        <p class="text-xs text-gray-600">Block A 101</p>
-        <p class="text-xs text-gray-600 mt-1">REASON : I have a meeting</p>
+        <p class="text-[13px] font-semibold text-gray-800 mb-1">Dr. maria william</p>
+        <p class="text-[11px] text-gray-600 leading-[17px]">Exam Duty - 22 may 2026</p>
+        <p class="text-[11px] text-gray-600 leading-[17px]">9:00 AM - 12:00 PM</p>
+        <p class="text-[11px] text-gray-600 leading-[17px]">Block A 101</p>
+        <p class="text-[11px] text-gray-600 leading-[17px] mt-1">REASON : I have a meeting</p>
       </div>
     </div>
 
     <!-- Accept / Reject -->
-    <div class="flex items-center gap-3 flex-shrink-0">
-      <button class="px-5 py-1.5 bg-green-600 text-white text-sm font-medium rounded-md hover:bg-green-700 transition-colors">
+    <div class="flex items-center gap-2 flex-shrink-0">
+      <button class="px-5 py-1.5 bg-green-600 text-white text-[12px] font-semibold rounded-md hover:bg-green-700 transition-colors">
         Accept
       </button>
-      <button class="px-5 py-1.5 bg-red-600 text-white text-sm font-medium rounded-md hover:bg-red-700 transition-colors">
+      <button class="px-5 py-1.5 bg-red-600 text-white text-[12px] font-semibold rounded-md hover:bg-red-700 transition-colors">
         Reject
       </button>
     </div>

@@ -19,4 +19,9 @@ export class SidebarComponent {
       '/duty-records'
     ].some(path => this.router.url.includes(path));
   }
+
+  isSwapActive(): boolean {
+    return this.router.url === '/swap-request' ||
+           this.router.url === '/received-request';
+  }
 }
