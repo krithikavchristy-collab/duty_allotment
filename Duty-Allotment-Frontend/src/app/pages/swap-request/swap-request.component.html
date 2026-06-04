@@ -1,56 +1,62 @@
-<section class="min-h-full bg-[#fafafd] px-8 pt-7">
+<section class="min-h-full bg-[#fafafd] px-[74px] pt-[28px]">
 
   <!-- Page Title -->
-  <h1 class="text-[22px] font-semibold text-gray-900 mb-5">Duty Swap</h1>
+  <h1 class="text-[20px] font-semibold text-black mb-[24px]">Duty Swap</h1>
 
   <!-- Tabs -->
-  <div class="flex items-center gap-1 mb-0">
+  <div class="flex items-center mb-0">
     <a routerLink="/swap-request"
-       class="px-6 py-2 rounded-md text-sm font-semibold bg-blue-600 text-white">
+       class="px-5 py-[7px] rounded-md text-[13px] font-semibold bg-blue-600 text-white mr-2">
       Request New Swap
     </a>
     <a routerLink="/received-request"
-       class="px-6 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-gray-700">
+       class="px-5 py-[7px] rounded-md text-[13px] font-medium text-gray-500 hover:text-gray-700">
       Received Request
     </a>
   </div>
 
   <hr class="border-gray-200 mt-3 mb-7">
 
-  <!-- My Duty + Swap Icon + Swap With -->
+  <!-- Cards Row -->
   <div class="flex items-center gap-5 mb-5">
 
     <!-- My Duty Card -->
-    <div class="w-[320px] border border-gray-200 rounded-xl bg-white px-5 py-4">
-      <p class="text-[13px] font-bold text-gray-800 mb-4">My Duty</p>
+    <div class="w-[330px] border border-gray-200 rounded-[10px] bg-white px-5 py-4">
 
-      <!-- Duty icon + name row -->
-      <div class="flex items-center gap-3 mb-4">
-        <svg width="26" height="26" viewBox="0 0 64 64" fill="none">
-          <rect x="14" y="6" width="36" height="52" rx="6" stroke="#374151" stroke-width="4"/>
-          <path d="M22 18H42M22 30H42M22 42H34" stroke="#374151" stroke-width="4" stroke-linecap="round"/>
+      <!-- Title -->
+      <p class="text-[13px] font-bold text-black mb-3">My Duty</p>
+
+      <!-- All content in ONE horizontal row -->
+      <div class="flex items-center gap-3">
+
+        <!-- Duty icon + name -->
+        <svg width="22" height="22" viewBox="0 0 64 64" fill="none" class="shrink-0">
+          <rect x="12" y="6" width="40" height="52" rx="6" stroke="#374151" stroke-width="4"/>
+          <path d="M22 20H42M22 32H42M22 44H34" stroke="#374151" stroke-width="4" stroke-linecap="round"/>
         </svg>
-        <span class="text-[14px] font-semibold text-gray-800">Interview Duty</span>
-      </div>
+        <span class="text-[13px] font-semibold text-black whitespace-nowrap">Interview Duty</span>
 
-      <!-- Date/time row -->
-      <div class="flex items-start gap-2">
-        <svg width="15" height="15" viewBox="0 0 64 64" fill="none" class="mt-[2px] shrink-0">
+        <!-- Spacer -->
+        <div class="flex-1"></div>
+
+        <!-- Calendar icon + date -->
+        <svg width="13" height="13" viewBox="0 0 64 64" fill="none" class="shrink-0">
           <rect x="10" y="14" width="44" height="42" rx="8" stroke="#6B7280" stroke-width="4"/>
           <path d="M10 26H54" stroke="#6B7280" stroke-width="4"/>
           <path d="M22 8V18M42 8V18" stroke="#6B7280" stroke-width="4"/>
         </svg>
         <div>
-          <p class="text-[11px] font-bold text-gray-700 leading-[16px]">Date/time</p>
-          <p class="text-[11px] text-gray-500 leading-[16px]">21 - May - 2026</p>
-          <p class="text-[11px] text-gray-500 leading-[16px]">10:00 AM - 11:00 PM</p>
+          <p class="text-[11px] font-bold text-black leading-[15px]">Date/time</p>
+          <p class="text-[10px] text-gray-500 leading-[15px]">21 - May - 2026</p>
+          <p class="text-[10px] text-gray-500 leading-[15px]">10:00 AM - 11:00 PM</p>
         </div>
+
       </div>
     </div>
 
     <!-- Swap Icon -->
-    <div class="flex items-center justify-center w-[50px]">
-      <svg width="30" height="30" viewBox="0 0 64 64" fill="none">
+    <div class="flex items-center justify-center w-[36px]">
+      <svg width="24" height="24" viewBox="0 0 64 64" fill="none">
         <path d="M14 22H48" stroke="#374151" stroke-width="4" stroke-linecap="round"/>
         <path d="M40 12L52 22L40 32" stroke="#374151" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M50 43H16" stroke="#374151" stroke-width="4" stroke-linecap="round"/>
@@ -59,10 +65,10 @@
     </div>
 
     <!-- Swap With Card -->
-    <div class="w-[280px] border border-gray-200 rounded-xl bg-white px-5 py-4">
-      <p class="text-[13px] font-bold text-gray-800 mb-4">Swap With</p>
+    <div class="w-[240px] border border-gray-200 rounded-[10px] bg-white px-5 py-4">
+      <p class="text-[13px] font-bold text-black mb-3">Swap With</p>
       <label class="text-[11px] text-gray-500 mb-1 block">Select Faculty</label>
-      <select class="w-full border border-gray-300 rounded-md px-3 py-2 text-[12px] text-gray-500 bg-white outline-none focus:ring-1 focus:ring-blue-400">
+      <select class="w-full border border-gray-300 rounded-[5px] px-3 py-1.5 text-[11px] text-gray-500 bg-white outline-none focus:ring-1 focus:ring-blue-400">
         <option value="">Choose Faculty Member</option>
       </select>
     </div>
@@ -70,15 +76,15 @@
   </div>
 
   <!-- Reason for Swap Request -->
-  <div class="w-[655px] border border-gray-200 rounded-xl bg-white px-5 py-4">
-    <p class="text-[13px] font-bold text-gray-800 mb-3">Reason for Swap Request</p>
+  <div class="w-[610px] border border-gray-200 rounded-[10px] bg-white px-5 py-4">
+    <p class="text-[13px] font-bold text-black mb-3">Reason for Swap Request</p>
     <textarea
       rows="5"
-      class="w-full border border-gray-200 rounded-lg px-4 py-3 text-[12px] text-gray-600 resize-none outline-none focus:ring-1 focus:ring-blue-400 bg-gray-50"
+      class="w-full border border-gray-200 rounded-[6px] px-4 py-3 text-[12px] text-gray-600 resize-none outline-none focus:ring-1 focus:ring-blue-400 bg-gray-50"
       placeholder="Enter the Reason for Requesting Swap...">
     </textarea>
     <div class="flex justify-end mt-3">
-      <button class="px-7 py-2 bg-blue-600 text-white text-[13px] font-semibold rounded-md hover:bg-blue-700 transition-colors">
+      <button class="px-7 py-2 bg-blue-600 text-white text-[13px] font-semibold rounded-[6px] hover:bg-blue-700 transition-colors">
         Submit
       </button>
     </div>
