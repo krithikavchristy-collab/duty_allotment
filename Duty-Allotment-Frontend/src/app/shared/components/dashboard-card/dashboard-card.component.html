@@ -1,0 +1,50 @@
+<div class="w-[305px] h-[265px] bg-[#e9efff] rounded-[30px] px-7 py-6">
+
+  <div class="flex items-center gap-8">
+
+    <svg *ngIf="iconType === 'calendar'" width="58" height="58" viewBox="0 0 64 64" fill="none">
+      <rect x="10" y="14" width="44" height="42" rx="8" stroke="black" stroke-width="5"/>
+      <path d="M10 26H54" stroke="black" stroke-width="5"/>
+      <path d="M22 8V18" stroke="black" stroke-width="5" stroke-linecap="round"/>
+      <path d="M42 8V18" stroke="black" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="22" cy="37" r="2.5" fill="black"/>
+      <circle cx="32" cy="37" r="2.5" fill="black"/>
+      <circle cx="42" cy="37" r="2.5" fill="black"/>
+      <circle cx="22" cy="47" r="2.5" fill="black"/>
+      <circle cx="32" cy="47" r="2.5" fill="black"/>
+      <circle cx="42" cy="47" r="2.5" fill="black"/>
+    </svg>
+
+    <svg *ngIf="iconType === 'swap'" width="64" height="64" viewBox="0 0 64 64" fill="none">
+      <path d="M14 22H48" stroke="black" stroke-width="5" stroke-linecap="round"/>
+      <path d="M40 12L52 22L40 32" stroke="black" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M50 43H16" stroke="black" stroke-width="5" stroke-linecap="round"/>
+      <path d="M24 33L12 43L24 53" stroke="black" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+    <svg *ngIf="iconType === 'clock'" width="64" height="64" viewBox="0 0 64 64" fill="none">
+      <rect x="10" y="10" width="44" height="44" rx="14" stroke="black" stroke-width="5"/>
+      <path d="M32 20V34L43 42" stroke="black" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+    <h2 class="text-[24px] font-medium text-black">
+      {{ title }}
+    </h2>
+
+  </div>
+
+  <div class="text-center mt-5">
+    <h3 class="text-[64px] leading-none font-normal text-black">
+      {{ count }}
+    </h3>
+
+    <p class="mt-4 text-[14px] text-gray-500">
+      {{ description }}
+    </p>
+
+    <button class="mt-5 w-[95px] h-[25px] bg-black text-white text-[13px] rounded-[8px]">
+      View all
+    </button>
+  </div>
+
+</div>

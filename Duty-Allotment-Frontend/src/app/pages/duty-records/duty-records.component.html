@@ -1,0 +1,89 @@
+<section class="min-h-full bg-[#fafafd] px-[86px] pt-[28px]">
+
+  <h1 class="text-[42px] font-bold text-black">
+    Duty Records
+  </h1>
+
+  <div class="mt-[78px] flex items-center">
+    <div class="w-[355px] h-[42px] bg-white border border-gray-200 rounded-[9px] flex items-center px-[16px]">
+      <span class="text-gray-400 text-[20px] mr-3">⌕</span>
+      <input
+        type="text"
+        placeholder="Search Faculty..."
+        class="w-full bg-transparent outline-none text-[15px] placeholder:text-gray-400"
+      />
+    </div>
+
+    <div class="ml-[160px] flex items-center gap-[14px] text-[13px] text-gray-500">
+      <span class="text-blue-600 font-medium">1D</span>
+      <span>1W</span>
+      <span>1M</span>
+      <span>3M</span>
+      <span>6M</span>
+      <span>1Y</span>
+    </div>
+
+    <button class="ml-[24px] w-[132px] h-[40px] bg-white border border-gray-200 rounded-[8px] text-[15px] text-gray-600">
+      Date Range
+    </button>
+
+    <button class="ml-[12px] w-[95px] h-[40px] bg-white border border-gray-200 rounded-[8px] text-[15px] text-gray-600">
+      Filters
+    </button>
+
+    <button class="ml-[30px] w-[100px] h-[40px] bg-blue-600 text-white rounded-[8px] text-[15px] shadow-lg">
+      Export
+    </button>
+  </div>
+
+  <div class="mt-[52px] ml-[54px] w-[1060px]">
+    <table class="w-full text-left">
+      <thead>
+        <tr class="h-[42px] text-[14px] text-gray-500 font-bold tracking-wide">
+          <th class="w-[210px]">FACULTY NAME</th>
+          <th class="w-[210px]">DUTY TYPE</th>
+          <th class="w-[220px]">DATE</th>
+          <th class="w-[230px]">EVENT</th>
+          <th>STATUS</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr class="h-[78px] text-[16px] text-[#111827]">
+          <td class="font-bold">John</td>
+          <td class="font-bold">EXAM DUTY</td>
+          <td class="text-[#475569]">May 30, 2026</td>
+          <td class="font-bold">End Sem Exam</td>
+          <td>
+            <span class="bg-[#fff4dc] text-orange-500 px-[14px] py-[6px] rounded-[8px] text-[14px]">
+              Pending
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mt-[252px] ml-[16px] w-[1080px] border-t border-gray-200"></div>
+
+  <div class="mt-[18px] ml-[16px] w-[1080px] flex items-center justify-between text-[14px] text-gray-500">
+    <div class="flex items-center gap-3">
+      <span>Rows per page</span>
+      <button class="w-[56px] h-[32px] bg-white border border-gray-200 rounded-[8px] text-black">
+        10⌄
+      </button>
+    </div>
+
+    <div class="flex items-center gap-5">
+      <span>1 - 10 of 25</span>
+      <span class="text-gray-300">‹</span>
+      <span class="w-[34px] h-[34px] bg-blue-600 text-white rounded-[9px] flex items-center justify-center shadow-lg">
+        1
+      </span>
+      <span class="text-gray-700">2</span>
+      <span class="text-gray-700">3</span>
+      <span class="text-gray-300">›</span>
+    </div>
+  </div>
+
+</section>

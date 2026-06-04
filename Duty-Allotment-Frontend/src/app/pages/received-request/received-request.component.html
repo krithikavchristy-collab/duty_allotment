@@ -1,0 +1,50 @@
+<section class="min-h-full bg-[#fafafd] px-[74px] pt-[28px]">
+
+  <!-- Page Title -->
+  <h1 class="text-[22px] font-semibold text-black mb-[28px]">Duty Swap</h1>
+
+  <!-- Tabs -->
+  <div class="flex items-center gap-0 mb-0">
+    <a routerLink="/swap-request"
+       class="px-6 py-2 rounded-md text-[13px] font-medium text-gray-500 hover:text-gray-700 mr-2">
+      Request New Swap
+    </a>
+    <a routerLink="/received-request"
+       class="px-6 py-2 rounded-md text-[13px] font-semibold bg-blue-600 text-white">
+      Received Request
+    </a>
+  </div>
+
+  <hr class="border-gray-200 mt-3 mb-8">
+
+  <!-- Request Card -->
+  <div class="w-[660px] border border-gray-200 rounded-[12px] bg-white px-5 py-4 flex items-center justify-between gap-4">
+
+    <div class="flex items-start gap-4">
+      <!-- Avatar -->
+      <img src="assets/images/Avatar.jpg"
+           alt="Avatar"
+           class="w-[44px] h-[44px] rounded-full object-cover flex-shrink-0 mt-1">
+
+      <div>
+        <p class="text-[14px] font-semibold text-black mb-[6px]">Dr. maria william</p>
+        <p class="text-[12px] text-gray-600 leading-[18px]">Exam Duty - 22 may 2026</p>
+        <p class="text-[12px] text-gray-600 leading-[18px]">9:00 AM - 12:00 PM</p>
+        <p class="text-[12px] text-gray-600 leading-[18px]">Block A 101</p>
+        <p class="text-[12px] text-gray-600 leading-[18px] mt-[4px]">REASON : I have a meeting</p>
+      </div>
+    </div>
+
+    <!-- Accept / Reject Buttons -->
+    <div class="flex items-center gap-3 flex-shrink-0">
+      <button class="px-5 py-2 bg-green-600 text-white text-[13px] font-semibold rounded-[6px] hover:bg-green-700 transition-colors">
+        Accept
+      </button>
+      <button class="px-5 py-2 bg-red-600 text-white text-[13px] font-semibold rounded-[6px] hover:bg-red-700 transition-colors">
+        Reject
+      </button>
+    </div>
+
+  </div>
+
+</section>
