@@ -1,318 +1,148 @@
-<section class="min-h-full bg-[#fafafd] px-10 pt-5">
+<section class="min-h-full bg-[#fafafd] px-[32px] pt-[28px] pb-[80px]">
 
-  <!-- Page Header Row: Title left, Add Faculty right -->
-  <div class="flex items-center justify-between mb-4">
-    <h1 class="text-[18px] font-semibold text-gray-800">Faculty Management</h1>
-    <button class="bg-blue-600 hover:bg-blue-700 text-white text-[13px] font-medium px-4 py-2 rounded-md shadow-sm">
-      + Add Faculty
-    </button>
-  </div>
+  <div class="w-[735px]">
 
-  <!-- Search + Filters Row -->
-  <div class="flex items-center justify-between mb-4">
-    <!-- Search -->
-    <div class="flex items-center gap-2 bg-white border border-gray-200 rounded-md px-3 py-2 w-[220px] h-[36px]">
-      <i class="bi bi-search text-gray-400 text-[13px]"></i>
-      <input
-        type="text"
-        placeholder="Search Faculty..."
-        class="w-full bg-transparent outline-none text-[13px] text-gray-600 placeholder:text-gray-400"
-      />
+    <!-- Title + Add Faculty -->
+    <div class="flex items-center justify-between mb-[18px]">
+      <h1 class="text-[13px] font-semibold text-[#111827]">
+        Faculty Management
+      </h1>
+
+      <button class="h-[31px] px-[14px] bg-[#2563EB] text-white text-[11px] font-medium rounded-[6px] shadow-md">
+        + Add Faculty
+      </button>
     </div>
 
-    <!-- Filters button -->
-    <button class="flex items-center gap-2 bg-white border border-gray-200 rounded-md px-3 py-2 h-[36px] text-[13px] text-gray-500 hover:bg-gray-50">
-      <i class="bi bi-funnel text-gray-400 text-[13px]"></i>
-      Filters
-    </button>
-  </div>
+    <!-- Table Card -->
+    <div class="w-[735px] h-[565px] bg-white border border-[#E5E7EB] rounded-[10px] overflow-hidden shadow-sm">
 
-  <!-- Table Card -->
-  <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
-    <table class="w-full text-left text-[13px]">
-      <thead>
-        <tr class="border-b border-gray-100 text-gray-400 text-[11px] font-semibold tracking-wider uppercase">
-          <th class="px-4 py-3 w-10">
-            <input type="checkbox" class="w-4 h-4 rounded border-gray-300 accent-blue-600" />
-          </th>
-          <th class="px-4 py-3 w-[120px]">EMP ID</th>
-          <th class="px-4 py-3 w-[160px]">Faculty Name</th>
-          <th class="px-4 py-3 w-[200px]">Department</th>
-          <th class="px-4 py-3 w-[180px]">Designation</th>
-          <th class="px-4 py-3 w-[140px]">Status</th>
-          <th class="px-4 py-3">Actions</th>
-        </tr>
-      </thead>
+      <!-- Search + Filter -->
+      <div class="h-[55px] flex items-center justify-between px-[14px] border-b border-[#E5E7EB]">
 
-      <tbody>
+        <div class="w-[190px] h-[30px] border border-[#E5E7EB] rounded-[6px] flex items-center px-[10px] bg-white">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+               stroke="#A8B1C2" stroke-width="2" stroke-linecap="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M20 20l-4.5-4.5"></path>
+          </svg>
 
-        <!-- Row 1 - On Leave -->
-        <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-          <td class="px-4 py-4">
-            <input type="checkbox" class="w-4 h-4 rounded border-gray-300 accent-blue-600" />
-          </td>
-          <td class="px-4 py-4 font-medium text-gray-700">EMP 011</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Dr. John</td>
-          <td class="px-4 py-4 text-gray-600">Computer Science</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Professor</td>
-          <td class="px-4 py-4">
-            <span class="text-[11px] font-medium text-orange-500 bg-orange-50 border border-orange-200 px-2.5 py-1 rounded-md">
-              On Leave
-            </span>
-          </td>
-          <td class="px-4 py-4">
-            <div class="flex items-center gap-3 text-gray-400">
-              <button class="hover:text-blue-500 transition-colors"><i class="bi bi-eye text-[15px]"></i></button>
-              <button class="hover:text-green-500 transition-colors"><i class="bi bi-pencil-square text-[15px]"></i></button>
-              <button class="hover:text-red-500 transition-colors"><i class="bi bi-trash text-[15px]"></i></button>
-              <button class="hover:text-gray-600 transition-colors"><i class="bi bi-three-dots-vertical text-[15px]"></i></button>
-            </div>
-          </td>
-        </tr>
+          <input
+            type="text"
+            placeholder="Search Faculty..."
+            class="ml-[8px] w-full bg-transparent outline-none text-[10px] text-[#6B7280] placeholder:text-[#B8C0CC]"
+          />
+        </div>
 
-        <!-- Row 2 - On Leave -->
-        <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-          <td class="px-4 py-4">
-            <input type="checkbox" class="w-4 h-4 rounded border-gray-300 accent-blue-600" />
-          </td>
-          <td class="px-4 py-4 font-medium text-gray-700">EMP 015</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Kevin</td>
-          <td class="px-4 py-4 text-gray-600">Computer Science</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Professor</td>
-          <td class="px-4 py-4">
-            <span class="text-[11px] font-medium text-orange-500 bg-orange-50 border border-orange-200 px-2.5 py-1 rounded-md">
-              On Leave
-            </span>
-          </td>
-          <td class="px-4 py-4">
-            <div class="flex items-center gap-3 text-gray-400">
-              <button class="hover:text-blue-500 transition-colors"><i class="bi bi-eye text-[15px]"></i></button>
-              <button class="hover:text-green-500 transition-colors"><i class="bi bi-pencil-square text-[15px]"></i></button>
-              <button class="hover:text-red-500 transition-colors"><i class="bi bi-trash text-[15px]"></i></button>
-              <button class="hover:text-gray-600 transition-colors"><i class="bi bi-three-dots-vertical text-[15px]"></i></button>
-            </div>
-          </td>
-        </tr>
+        <button class="h-[30px] px-[13px] border border-[#DADDE3] rounded-[6px] flex items-center gap-[7px] text-[10px] text-[#6B7280] bg-white">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+               stroke="#8B95A7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 5h18l-7 8v5l-4 2v-7L3 5z"></path>
+          </svg>
+          Filters
+        </button>
 
-        <!-- Row 3 - Active -->
-        <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-          <td class="px-4 py-4">
-            <input type="checkbox" class="w-4 h-4 rounded border-gray-300 accent-blue-600" />
-          </td>
-          <td class="px-4 py-4 font-medium text-gray-700">EMP 022</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Mary</td>
-          <td class="px-4 py-4 text-gray-600">Computer Science</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Professor</td>
-          <td class="px-4 py-4">
-            <span class="text-[11px] font-medium text-blue-600 bg-white border border-blue-400 px-2.5 py-1 rounded-md">
-              Active
-            </span>
-          </td>
-          <td class="px-4 py-4">
-            <div class="flex items-center gap-3 text-gray-400">
-              <button class="hover:text-blue-500 transition-colors"><i class="bi bi-eye text-[15px]"></i></button>
-              <button class="hover:text-green-500 transition-colors"><i class="bi bi-pencil-square text-[15px]"></i></button>
-              <button class="hover:text-red-500 transition-colors"><i class="bi bi-trash text-[15px]"></i></button>
-              <button class="hover:text-gray-600 transition-colors"><i class="bi bi-three-dots-vertical text-[15px]"></i></button>
-            </div>
-          </td>
-        </tr>
-
-        <!-- Row 4 - Active -->
-        <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-          <td class="px-4 py-4">
-            <input type="checkbox" class="w-4 h-4 rounded border-gray-300 accent-blue-600" />
-          </td>
-          <td class="px-4 py-4 font-medium text-gray-700">EMP 023</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Mary</td>
-          <td class="px-4 py-4 text-gray-600">Computer Science</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Professor</td>
-          <td class="px-4 py-4">
-            <span class="text-[11px] font-medium text-blue-600 bg-white border border-blue-400 px-2.5 py-1 rounded-md">
-              Active
-            </span>
-          </td>
-          <td class="px-4 py-4">
-            <div class="flex items-center gap-3 text-gray-400">
-              <button class="hover:text-blue-500 transition-colors"><i class="bi bi-eye text-[15px]"></i></button>
-              <button class="hover:text-green-500 transition-colors"><i class="bi bi-pencil-square text-[15px]"></i></button>
-              <button class="hover:text-red-500 transition-colors"><i class="bi bi-trash text-[15px]"></i></button>
-              <button class="hover:text-gray-600 transition-colors"><i class="bi bi-three-dots-vertical text-[15px]"></i></button>
-            </div>
-          </td>
-        </tr>
-
-        <!-- Row 5 - Active -->
-        <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-          <td class="px-4 py-4">
-            <input type="checkbox" class="w-4 h-4 rounded border-gray-300 accent-blue-600" />
-          </td>
-          <td class="px-4 py-4 font-medium text-gray-700">EMP 024</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Mary</td>
-          <td class="px-4 py-4 text-gray-600">Computer Science</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Professor</td>
-          <td class="px-4 py-4">
-            <span class="text-[11px] font-medium text-blue-600 bg-white border border-blue-400 px-2.5 py-1 rounded-md">
-              Active
-            </span>
-          </td>
-          <td class="px-4 py-4">
-            <div class="flex items-center gap-3 text-gray-400">
-              <button class="hover:text-blue-500 transition-colors"><i class="bi bi-eye text-[15px]"></i></button>
-              <button class="hover:text-green-500 transition-colors"><i class="bi bi-pencil-square text-[15px]"></i></button>
-              <button class="hover:text-red-500 transition-colors"><i class="bi bi-trash text-[15px]"></i></button>
-              <button class="hover:text-gray-600 transition-colors"><i class="bi bi-three-dots-vertical text-[15px]"></i></button>
-            </div>
-          </td>
-        </tr>
-
-        <!-- Row 6 -->
-        <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-          <td class="px-4 py-4"><input type="checkbox" class="w-4 h-4 rounded border-gray-300 accent-blue-600" /></td>
-          <td class="px-4 py-4 font-medium text-gray-700">EMP 025</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Mary</td>
-          <td class="px-4 py-4 text-gray-600">Computer Science</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Professor</td>
-          <td class="px-4 py-4">
-            <span class="text-[11px] font-medium text-blue-600 bg-white border border-blue-400 px-2.5 py-1 rounded-md">Active</span>
-          </td>
-          <td class="px-4 py-4">
-            <div class="flex items-center gap-3 text-gray-400">
-              <button class="hover:text-blue-500"><i class="bi bi-eye text-[15px]"></i></button>
-              <button class="hover:text-green-500"><i class="bi bi-pencil-square text-[15px]"></i></button>
-              <button class="hover:text-red-500"><i class="bi bi-trash text-[15px]"></i></button>
-              <button class="hover:text-gray-600"><i class="bi bi-three-dots-vertical text-[15px]"></i></button>
-            </div>
-          </td>
-        </tr>
-
-        <!-- Row 7 -->
-        <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-          <td class="px-4 py-4"><input type="checkbox" class="w-4 h-4 rounded border-gray-300 accent-blue-600" /></td>
-          <td class="px-4 py-4 font-medium text-gray-700">EMP 026</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Mary</td>
-          <td class="px-4 py-4 text-gray-600">Computer Science</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Professor</td>
-          <td class="px-4 py-4">
-            <span class="text-[11px] font-medium text-blue-600 bg-white border border-blue-400 px-2.5 py-1 rounded-md">Active</span>
-          </td>
-          <td class="px-4 py-4">
-            <div class="flex items-center gap-3 text-gray-400">
-              <button class="hover:text-blue-500"><i class="bi bi-eye text-[15px]"></i></button>
-              <button class="hover:text-green-500"><i class="bi bi-pencil-square text-[15px]"></i></button>
-              <button class="hover:text-red-500"><i class="bi bi-trash text-[15px]"></i></button>
-              <button class="hover:text-gray-600"><i class="bi bi-three-dots-vertical text-[15px]"></i></button>
-            </div>
-          </td>
-        </tr>
-
-        <!-- Row 8 -->
-        <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-          <td class="px-4 py-4"><input type="checkbox" class="w-4 h-4 rounded border-gray-300 accent-blue-600" /></td>
-          <td class="px-4 py-4 font-medium text-gray-700">EMP 027</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Mary</td>
-          <td class="px-4 py-4 text-gray-600">Computer Science</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Professor</td>
-          <td class="px-4 py-4">
-            <span class="text-[11px] font-medium text-blue-600 bg-white border border-blue-400 px-2.5 py-1 rounded-md">Active</span>
-          </td>
-          <td class="px-4 py-4">
-            <div class="flex items-center gap-3 text-gray-400">
-              <button class="hover:text-blue-500"><i class="bi bi-eye text-[15px]"></i></button>
-              <button class="hover:text-green-500"><i class="bi bi-pencil-square text-[15px]"></i></button>
-              <button class="hover:text-red-500"><i class="bi bi-trash text-[15px]"></i></button>
-              <button class="hover:text-gray-600"><i class="bi bi-three-dots-vertical text-[15px]"></i></button>
-            </div>
-          </td>
-        </tr>
-
-        <!-- Row 9 -->
-        <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-          <td class="px-4 py-4"><input type="checkbox" class="w-4 h-4 rounded border-gray-300 accent-blue-600" /></td>
-          <td class="px-4 py-4 font-medium text-gray-700">EMP 028</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Mary</td>
-          <td class="px-4 py-4 text-gray-600">Computer Science</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Professor</td>
-          <td class="px-4 py-4">
-            <span class="text-[11px] font-medium text-blue-600 bg-white border border-blue-400 px-2.5 py-1 rounded-md">Active</span>
-          </td>
-          <td class="px-4 py-4">
-            <div class="flex items-center gap-3 text-gray-400">
-              <button class="hover:text-blue-500"><i class="bi bi-eye text-[15px]"></i></button>
-              <button class="hover:text-green-500"><i class="bi bi-pencil-square text-[15px]"></i></button>
-              <button class="hover:text-red-500"><i class="bi bi-trash text-[15px]"></i></button>
-              <button class="hover:text-gray-600"><i class="bi bi-three-dots-vertical text-[15px]"></i></button>
-            </div>
-          </td>
-        </tr>
-
-        <!-- Row 10 -->
-        <tr class="hover:bg-gray-50 transition-colors">
-          <td class="px-4 py-4"><input type="checkbox" class="w-4 h-4 rounded border-gray-300 accent-blue-600" /></td>
-          <td class="px-4 py-4 font-medium text-gray-700">EMP 029</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Mary</td>
-          <td class="px-4 py-4 text-gray-600">Computer Science</td>
-          <td class="px-4 py-4 font-semibold text-gray-800">Professor</td>
-          <td class="px-4 py-4">
-            <span class="text-[11px] font-medium text-blue-600 bg-white border border-blue-400 px-2.5 py-1 rounded-md">Active</span>
-          </td>
-          <td class="px-4 py-4">
-            <div class="flex items-center gap-3 text-gray-400">
-              <button class="hover:text-blue-500"><i class="bi bi-eye text-[15px]"></i></button>
-              <button class="hover:text-green-500"><i class="bi bi-pencil-square text-[15px]"></i></button>
-              <button class="hover:text-red-500"><i class="bi bi-trash text-[15px]"></i></button>
-              <button class="hover:text-gray-600"><i class="bi bi-three-dots-vertical text-[15px]"></i></button>
-            </div>
-          </td>
-        </tr>
-
-      </tbody>
-    </table>
-
-    <!-- Pagination Footer -->
-    <div class="border-t border-gray-100 px-4 py-3 flex items-center justify-between text-[13px] text-gray-500">
-
-      <!-- Rows per page -->
-      <div class="flex items-center gap-2">
-        <span>Rows per page</span>
-        <select class="border border-gray-200 rounded-md px-2 py-1 text-[13px] text-gray-700 bg-white outline-none cursor-pointer">
-          <option>10</option>
-          <option>25</option>
-          <option>50</option>
-        </select>
       </div>
 
-      <!-- Page info + navigation -->
-      <div class="flex items-center gap-2">
-        <span class="text-gray-400 mr-2">1 - 10 of 25</span>
+      <!-- Header -->
+      <div class="h-[42px] bg-[#F8FAFC] border-b border-[#E5E7EB] grid grid-cols-[45px_95px_135px_150px_130px_105px_75px] items-center px-[14px] text-[9px] font-bold tracking-[0.08em] uppercase text-[#6B7280]">
+        <div>
+          <input type="checkbox" class="w-[13px] h-[13px]" />
+        </div>
+        <div>EMP ID</div>
+        <div>Faculty Name</div>
+        <div>Department</div>
+        <div>Designation</div>
+        <div>Status</div>
+        <div>Actions</div>
+      </div>
 
-        <!-- Prev -->
-        <button class="w-7 h-7 flex items-center justify-center rounded text-gray-300 hover:text-gray-500 disabled:opacity-40">
-          <i class="bi bi-chevron-left text-[13px]"></i>
-        </button>
+      <!-- Row 1 -->
+      <div class="h-[42px] border-b border-[#EEF0F4] grid grid-cols-[45px_95px_135px_150px_130px_105px_75px] items-center px-[14px] text-[10px] text-[#374151]">
+        <input type="checkbox" class="w-[13px] h-[13px]" />
+        <div>EMP 011</div>
+        <div class="font-bold text-black">Dr. John</div>
+        <div>Computer Science</div>
+        <div class="font-bold text-black">Professor</div>
+        <div>
+          <span class="px-[7px] py-[2px] rounded-[5px] border border-[#FDBA74] text-[#EA580C] bg-[#FFF7ED] text-[9px]">
+            On Leave
+          </span>
+        </div>
+        <div class="flex items-center gap-[10px] text-[#9CA3AF]">
+          <span>⊙</span><span>↗</span><span>⌫</span><span>⋮</span>
+        </div>
+      </div>
 
-        <!-- Page 1 - active -->
-        <button class="w-7 h-7 flex items-center justify-center rounded-md bg-blue-600 text-white text-[13px] font-semibold shadow-sm">
-          1
-        </button>
+      <!-- Row 2 -->
+      <div class="h-[42px] border-b border-[#EEF0F4] grid grid-cols-[45px_95px_135px_150px_130px_105px_75px] items-center px-[14px] text-[10px] text-[#374151]">
+        <input type="checkbox" class="w-[13px] h-[13px]" />
+        <div>EMP 015</div>
+        <div class="font-bold text-black">Kevin</div>
+        <div>Computer Science</div>
+        <div class="font-bold text-black">Professor</div>
+        <div>
+          <span class="px-[7px] py-[2px] rounded-[5px] border border-[#FDBA74] text-[#EA580C] bg-[#FFF7ED] text-[9px]">
+            On Leave
+          </span>
+        </div>
+        <div class="flex items-center gap-[10px] text-[#9CA3AF]">
+          <span>⊙</span><span>↗</span><span>⌫</span><span>⋮</span>
+        </div>
+      </div>
 
-        <!-- Page 2 -->
-        <button class="w-7 h-7 flex items-center justify-center rounded-md text-gray-600 hover:bg-gray-100 text-[13px]">
-          2
-        </button>
+      <!-- Active Rows -->
+      <ng-container *ngFor="let row of [
+        {id:'EMP 022', name:'Mary'},
+        {id:'EMP 023', name:'Mary'},
+        {id:'EMP 024', name:'Mary'},
+        {id:'EMP 025', name:'Mary'},
+        {id:'EMP 026', name:'Mary'},
+        {id:'EMP 027', name:'Mary'},
+        {id:'EMP 028', name:'Mary'},
+        {id:'EMP 029', name:'Mary'}
+      ]">
+        <div class="h-[42px] border-b border-[#EEF0F4] grid grid-cols-[45px_95px_135px_150px_130px_105px_75px] items-center px-[14px] text-[10px] text-[#374151]">
+          <input type="checkbox" class="w-[13px] h-[13px]" />
+          <div>{{ row.id }}</div>
+          <div class="font-bold text-black">{{ row.name }}</div>
+          <div>Computer Science</div>
+          <div class="font-bold text-black">Professor</div>
+          <div>
+            <span class="px-[8px] py-[2px] rounded-[5px] border border-[#60A5FA] text-[#2563EB] bg-white text-[9px]">
+              Active
+            </span>
+          </div>
+          <div class="flex items-center gap-[10px] text-[#9CA3AF]">
+            <span>⊙</span><span>↗</span><span>⌫</span><span>⋮</span>
+          </div>
+        </div>
+      </ng-container>
 
-        <!-- Page 3 -->
-        <button class="w-7 h-7 flex items-center justify-center rounded-md text-gray-600 hover:bg-gray-100 text-[13px]">
-          3
-        </button>
+      <!-- Footer Pagination -->
+      <div class="h-[47px] flex items-center justify-between px-[14px] border-t border-[#E5E7EB]">
 
-        <!-- Next -->
-        <button class="w-7 h-7 flex items-center justify-center rounded text-gray-400 hover:text-gray-600">
-          <i class="bi bi-chevron-right text-[13px]"></i>
-        </button>
+        <div class="flex items-center gap-[8px] text-[10px] text-[#6B7280]">
+          <span>Rows per page</span>
+          <select class="w-[38px] h-[24px] border border-[#E5E7EB] rounded-[5px] bg-white text-black text-[10px] px-[4px]">
+            <option>10</option>
+          </select>
+        </div>
+
+        <div class="flex items-center gap-[12px] text-[10px] text-[#6B7280]">
+          <span>1 - 10 of 25</span>
+          <span class="text-[#CBD5E1]">‹</span>
+          <span class="w-[22px] h-[22px] bg-[#2563EB] text-white rounded-[5px] flex items-center justify-center shadow">
+            1
+          </span>
+          <span>2</span>
+          <span>3</span>
+          <span>›</span>
+        </div>
+
       </div>
 
     </div>
+
   </div>
 
 </section>
